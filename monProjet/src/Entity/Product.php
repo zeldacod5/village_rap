@@ -33,7 +33,7 @@ class Product
     private $description;
 
     /**
-     * @ORM\Column(type="string", length=8)
+     * @ORM\Column(type="string", length=20)
      */
     private $ref;
 

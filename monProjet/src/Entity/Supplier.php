@@ -28,7 +28,7 @@ class Supplier
     private $city;
 
     /**
-     * @ORM\Column(type="string", length=50)
+     * @ORM\Column(type="string", length=250)
      */
     private $countries;
 
