@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ComposedBy{% endblock %}
+
+{% block body %}
+    <h1>ComposedBy</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ composed_by.id }}</td>
+            </tr>
+            <tr>
+                <th>ComposedTaxes</th>
+                <td>{{ composed_by.composedTaxes }}</td>
+            </tr>
+            <tr>
+                <th>ComposedQuantity</th>
+                <td>{{ composed_by.composedQuantity }}</td>
+            </tr>
+            <tr>
+                <th>ComposedSellPrice</th>
+                <td>{{ composed_by.composedSellPrice }}</td>
+            </tr>
+            <tr>
+                <th>ComposedWithDetails</th>
+                <td>{{ composed_by.composedWithDetails }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_composed_by_index') }}">back to list</a>
+
+    <a href="{{ path('app_composed_by_edit', {'id': composed_by.id}) }}">edit</a>
+
+    {{ include('composed_by/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Buyer{% endblock %}
+
+{% block body %}
+    <h1>Buyer</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ buyer.id }}</td>
+            </tr>
+            <tr>
+                <th>Category</th>
+                <td>{{ buyer.category }}</td>
+            </tr>
+            <tr>
+                <th>Ref</th>
+                <td>{{ buyer.ref }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ buyer.name }}</td>
+            </tr>
+            <tr>
+                <th>Surname</th>
+                <td>{{ buyer.surname }}</td>
+            </tr>
+            <tr>
+                <th>Adress</th>
+                <td>{{ buyer.adress }}</td>
+            </tr>
+            <tr>
+                <th>Zipcode</th>
+                <td>{{ buyer.zipcode }}</td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td>{{ buyer.city }}</td>
+            </tr>
+            <tr>
+                <th>Country</th>
+                <td>{{ buyer.country }}</td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td>{{ buyer.phone }}</td>
+            </tr>
+            <tr>
+                <th>Mail</th>
+                <td>{{ buyer.mail }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_buyer_index') }}">back to list</a>
+
+    <a href="{{ path('app_buyer_edit', {'id': buyer.id}) }}">edit</a>
+
+    {{ include('buyer/_delete_form.html.twig') }}
+{% endblock %}

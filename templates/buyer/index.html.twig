@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Buyer index{% endblock %}
+
+{% block body %}
+    <h1>Buyer index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Category</th>
+                <th>Ref</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Adress</th>
+                <th>Zipcode</th>
+                <th>City</th>
+                <th>Country</th>
+                <th>Phone</th>
+                <th>Mail</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for buyer in buyers %}
+            <tr>
+                <td>{{ buyer.id }}</td>
+                <td>{{ buyer.category }}</td>
+                <td>{{ buyer.ref }}</td>
+                <td>{{ buyer.name }}</td>
+                <td>{{ buyer.surname }}</td>
+                <td>{{ buyer.adress }}</td>
+                <td>{{ buyer.zipcode }}</td>
+                <td>{{ buyer.city }}</td>
+                <td>{{ buyer.country }}</td>
+                <td>{{ buyer.phone }}</td>
+                <td>{{ buyer.mail }}</td>
+                <td>
+                    <a href="{{ path('app_buyer_show', {'id': buyer.id}) }}">show</a>
+                    <a href="{{ path('app_buyer_edit', {'id': buyer.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="12">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_buyer_new') }}">Create new</a>
+{% endblock %}

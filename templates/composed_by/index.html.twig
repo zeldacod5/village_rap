@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ComposedBy index{% endblock %}
+
+{% block body %}
+    <h1>ComposedBy index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>ComposedTaxes</th>
+                <th>ComposedQuantity</th>
+                <th>ComposedSellPrice</th>
+                <th>ComposedWithDetails</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for composed_by in composed_bies %}
+            <tr>
+                <td>{{ composed_by.id }}</td>
+                <td>{{ composed_by.composedTaxes }}</td>
+                <td>{{ composed_by.composedQuantity }}</td>
+                <td>{{ composed_by.composedSellPrice }}</td>
+                <td>{{ composed_by.composedWithDetails }}</td>
+                <td>
+                    <a href="{{ path('app_composed_by_show', {'id': composed_by.id}) }}">show</a>
+                    <a href="{{ path('app_composed_by_edit', {'id': composed_by.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_composed_by_new') }}">Create new</a>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Staff index{% endblock %}
+
+{% block body %}
+    <h1>Staff index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Type</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Adresse</th>
+                <th>Zipcode</th>
+                <th>City</th>
+                <th>Country</th>
+                <th>Phone</th>
+                <th>Mail</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for staff in staff %}
+            <tr>
+                <td>{{ staff.id }}</td>
+                <td>{{ staff.type }}</td>
+                <td>{{ staff.name }}</td>
+                <td>{{ staff.surname }}</td>
+                <td>{{ staff.adresse }}</td>
+                <td>{{ staff.zipcode }}</td>
+                <td>{{ staff.city }}</td>
+                <td>{{ staff.country }}</td>
+                <td>{{ staff.phone }}</td>
+                <td>{{ staff.mail }}</td>
+                <td>
+                    <a href="{{ path('app_staff_show', {'id': staff.id}) }}">show</a>
+                    <a href="{{ path('app_staff_edit', {'id': staff.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="11">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_staff_new') }}">Create new</a>
+{% endblock %}

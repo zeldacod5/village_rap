@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Buyer{% endblock %}
+
+{% block body %}
+    <h1>Edit Buyer</h1>
+
+    {{ include('buyer/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_buyer_index') }}">back to list</a>
+
+    {{ include('buyer/_delete_form.html.twig') }}
+{% endblock %}

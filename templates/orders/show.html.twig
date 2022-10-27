@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Orders{% endblock %}
+
+{% block body %}
+    <h1>Orders</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ order.id }}</td>
+            </tr>
+            <tr>
+                <th>Coeffficient</th>
+                <td>{{ order.coeffficient }}</td>
+            </tr>
+            <tr>
+                <th>Reduction</th>
+                <td>{{ order.reduction }}</td>
+            </tr>
+            <tr>
+                <th>DeliveryAdress</th>
+                <td>{{ order.deliveryAdress }}</td>
+            </tr>
+            <tr>
+                <th>DeliveryZipcode</th>
+                <td>{{ order.deliveryZipcode }}</td>
+            </tr>
+            <tr>
+                <th>DeliveryCity</th>
+                <td>{{ order.deliveryCity }}</td>
+            </tr>
+            <tr>
+                <th>DeliveryCountry</th>
+                <td>{{ order.deliveryCountry }}</td>
+            </tr>
+            <tr>
+                <th>BillingAdress</th>
+                <td>{{ order.billingAdress }}</td>
+            </tr>
+            <tr>
+                <th>BillingZipcode</th>
+                <td>{{ order.billingZipcode }}</td>
+            </tr>
+            <tr>
+                <th>BillingCity</th>
+                <td>{{ order.billingCity }}</td>
+            </tr>
+            <tr>
+                <th>BillingCountry</th>
+                <td>{{ order.billingCountry }}</td>
+            </tr>
+            <tr>
+                <th>Methode</th>
+                <td>{{ order.methode }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ order.date ? order.date|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>DeleteDate</th>
+                <td>{{ order.deleteDate ? order.deleteDate|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>FacturationNumber</th>
+                <td>{{ order.facturationNumber }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_orders_index') }}">back to list</a>
+
+    <a href="{{ path('app_orders_edit', {'id': order.id}) }}">edit</a>
+
+    {{ include('orders/_delete_form.html.twig') }}
+{% endblock %}

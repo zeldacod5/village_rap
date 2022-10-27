@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Prepared index{% endblock %}
+
+{% block body %}
+    <h1>Prepared index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>DeliveryQuantity</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for prepared in prepareds %}
+            <tr>
+                <td>{{ prepared.id }}</td>
+                <td>{{ prepared.deliveryQuantity }}</td>
+                <td>
+                    <a href="{{ path('app_prepared_show', {'id': prepared.id}) }}">show</a>
+                    <a href="{{ path('app_prepared_edit', {'id': prepared.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_prepared_new') }}">Create new</a>
+{% endblock %}

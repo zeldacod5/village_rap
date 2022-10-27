@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Prepared{% endblock %}
+
+{% block body %}
+    <h1>Create new Prepared</h1>
+
+    {{ include('prepared/_form.html.twig') }}
+
+    <a href="{{ path('app_prepared_index') }}">back to list</a>
+{% endblock %}
