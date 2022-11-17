@@ -1,0 +1,22 @@
+/* cartes d'actualités de la page d'acceuil */
+.card-actu {
+    display: inline-block;
+    color: gray;
+}
+
+/* configuration de la navbar de la page de base */
+.navbar1 {
+    padding: 30px;
+    color: black;
+}
+
+.navbar2 {
+    padding: 30px;
+    color: black;
+}
+
+.navbar3 {
+    padding: 30px;
+    color: black;
+}
+
