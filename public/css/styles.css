@@ -4,19 +4,60 @@
     color: gray;
 }
 
-/* configuration de la navbar de la page de base */
+/* /!\/!\/!\ */
+/* /!\ CONFIGURATION SUR LA NAVBAR /!\ */
+/* /!\/!\/!\ */
+
+.nav {
+    
+}
+
 .navbar1 {
-    padding: 30px;
+    width: 50%;
     color: black;
 }
 
 .navbar2 {
-    padding: 30px;
+    width: 25%;
     color: black;
 }
 
 .navbar3 {
-    padding: 30px;
+    width: 25%;
     color: black;
 }
 
+
+
+/* /!\/!\/!\ */
+/* /!\ CONFIGURATION SUR LE FOOTER /!\ */
+/* /!\/!\/!\ */
+
+
+.rubriques_lien {
+    background-color: black;
+}
+
+.footer .a {
+    color: orange;
+}
+
+.partie_gauche {
+    display: inline;
+
+}
+
+.partie_droite {
+    display: inline;
+    padding: 35px;
+}
+
+.mentions_legales {
+    margin-left: 30%;
+    margin-top: 15px;
+    margin-right: auto;
+    color: gray;
+    width: auto;
+    font-style: italic;
+    font-size: small;
+}

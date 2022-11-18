@@ -11,43 +11,61 @@
     </head>
 
     <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">LOGOTEST<img src="/media/logo_test.png" width="100px"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarColor03">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item ps-2 ps-md-4">
-                    <a class="nav-link navbar1" href="#">Ventes Flash</a>
-                    </li>
-                    <li class="nav-item ps-2 ps-md-4" >
-                    <a class="nav-link navbar1" href="#">Adresse</a>
-                    </li>
-                    <li class="nav-item ps-2 ps-md-4">
-                    <a class="nav-link navbar1" href="#">Actualités</a>
-                    </li>
-                    <li class="nav-item ps-md-4">
-                    <a class="nav-link navbar2" href="#">Connexion</a>
-                    </li>
-                    <li class="nav-item ps-md-4">
-                    <a class="nav-link navbar3" href="#">Inscription</a>
-                    </li>
-                </ul>
+    <div class="container">
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">LOGOTEST<img src="/media/logo_test.png" width="100px"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarColor03">
+                        <ul class="navbar-nav me-auto">
+                                <li class="nav-item">
+                                <a class="nav-link active navbar1" href="#">Ventes
+                                <span class="visually-hidden">(current)</span></a>
+                                </li>
+                                <li class="nav-item ps-2 ps-md-4" >
+                                <a class="nav-link navbar1" href="#">Boutique</a>
+                                </li>
+                                <li class="nav-item ps-2 ps-md-4">
+                                <a class="nav-link navbar1" href="#">Actualités</a>
+                                </li>
+                                <li class="nav-item ps-md-4">
+                                <a class="nav-link navbar2" href="#">Connexion</a>
+                                </li>
+                                <li class="nav-item ps-md-4">
+                                <a class="nav-link navbar3" href="#">Inscription</a>
+                                </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-    </nav>
-    <img src="">    
+        </nav>
+    </div>
 
         {% block body %} {% endblock %}
 
         {% block javascripts %} {% endblock %}
-        <footer>
-        <div class="footer">
-            <div class="container">
-                    <p>chien</p>
-            </div>
+
+        <div class="container">
+            <footer>
+                <div class="rubriques_lien">
+                    <div class="partie_gauche">
+                        <a href="#" name="premierlien">Vyniles RAP US</a>
+                        <a href="#" name="deuxiemelien">Vyniles RAP FR</a>
+                        <a href="#" name="troisiemelien">Vyniles RAP ES</a>
+                    </div>
+                    <div class="partie_droite">
+                        <a href="#" name="premierlien">CD RAP US</a>
+                        <a href="#" name="deuxiemelien">CD RAP FR</a>
+                        <a href="#" name="troisiemelien">CD RAP ES</a>
+                    </div>
+                </div>
+
+                <div class="mentions_legales">
+
+                    <p>Projet crée en Symfony par Loucas Hérault et Maxence Lallemand - Novembre 2022</p>
+                </div>
+            </footer>
         </div>
 
     </body>
