@@ -1,20 +1,13 @@
-/* cartes d'actualités de la page d'acceuil */
-.card-actu {
-    display: inline-block;
-    color: gray;
-}
-
 /* /!\/!\/!\ */
 /* /!\ CONFIGURATION SUR LA NAVBAR /!\ */
 /* /!\/!\/!\ */
 
 .nav {
-    
+    align-items: center;
 }
-
 .navbar1 {
     width: 50%;
-    color: black;
+    color: red;
 }
 
 .navbar2 {
@@ -24,9 +17,8 @@
 
 .navbar3 {
     width: 25%;
-    color: black;
+    color: blue;
 }
-
 
 
 /* /!\/!\/!\ */
@@ -35,8 +27,11 @@
 
 
 .rubriques_lien {
-    background-color: black;
+    background-color: red;
+
 }
+
+
 
 .footer .a {
     color: orange;
@@ -60,4 +55,10 @@
     width: auto;
     font-style: italic;
     font-size: small;
+}
+
+/* cartes d'actualités de la page d'acceuil */
+.card-actu {
+    display: inline-block;
+    color: gray;
 }

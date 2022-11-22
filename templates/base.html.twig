@@ -11,7 +11,7 @@
     </head>
 
     <body>
-    <div class="container">
+
         <nav class="navbar navbar-expand-md navbar-light bg-light">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">LOGOTEST<img src="/media/logo_test.png" width="100px"></a>
@@ -40,13 +40,16 @@
                     </div>
                 </div>
         </nav>
+        <div class="banniere">
+
+        </div>
     </div>
+    
+    
 
         {% block body %} {% endblock %}
 
         {% block javascripts %} {% endblock %}
-
-        <div class="container">
             <footer>
                 <div class="rubriques_lien">
                     <div class="partie_gauche">
@@ -62,11 +65,10 @@
                 </div>
 
                 <div class="mentions_legales">
-
                     <p>Projet crée en Symfony par Loucas Hérault et Maxence Lallemand - Novembre 2022</p>
                 </div>
+
             </footer>
-        </div>
 
     </body>
 </html>
