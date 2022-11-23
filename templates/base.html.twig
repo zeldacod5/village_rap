@@ -14,14 +14,14 @@
 
         <nav class="navbar navbar-expand-md navbar-light bg-light">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">LOGOTEST<img src="/media/logo_test.png" width="100px"></a>
+                    <a class="navbar-brand" href="#"><img class="logo" src="/media/logo_test.png" width="140px"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarColor03">
                         <ul class="navbar-nav me-auto">
                                 <li class="nav-item">
-                                <a class="nav-link active navbar1" href="#">Ventes
+                                <a class="nav-link active navbar1" href="#">
                                 <span class="visually-hidden">(current)</span></a>
                                 </li>
                                 <li class="nav-item ps-2 ps-md-4" >
@@ -31,23 +31,26 @@
                                 <a class="nav-link navbar1" href="#">Actualités</a>
                                 </li>
                                 <li class="nav-item ps-md-4">
-                                <a class="nav-link navbar2" href="#">Connexion</a>
+                                <a class="nav-link navbar2" href="#">Inscription</a>
                                 </li>
                                 <li class="nav-item ps-md-4">
-                                <a class="nav-link navbar3" href="#">Inscription</a>
+                                <a class="nav-link navbar2" href="#">Connexion</a>
                                 </li>
                         </ul>
                     </div>
                 </div>
         </nav>
+
         <div class="banniere">
-
+            <img src="/media/banniere1.png" width="100%">
         </div>
-    </div>
-    
-    
 
-        {% block body %} {% endblock %}
+
+    
+    
+<div class="container">
+        {% block body %} {% endblock %} 
+</div>
 
         {% block javascripts %} {% endblock %}
             <footer>
@@ -65,13 +68,15 @@
                 </div>
 
                 <div class="mentions_legales">
-                    <p>Projet crée en Symfony par Loucas Hérault et Maxence Lallemand - Novembre 2022</p>
+                    <p>© Copyright - Projet crée en Symfony par  <a href="https://github.com/zeldacod5">Loucas Hérault</a> et <a href="https://github.com/kiirbs">Maxence Lallemand</a></p>
                 </div>
+                <div class="date">
+                <p>Dernière mise à jour du site le :
 
             </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 
-    </body>
+</body>
 </html>

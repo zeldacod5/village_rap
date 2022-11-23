@@ -1,24 +1,54 @@
+body {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: orange;
+    background-color:   #1c2833   !important;
+}
+
 /* /!\/!\/!\ */
 /* /!\ CONFIGURATION SUR LA NAVBAR /!\ */
 /* /!\/!\/!\ */
 
-.nav {
-    align-items: center;
+.navbar {
+    background-color:   #1c2833   !important;
 }
+
+.navbar-brand {
+    color: orange;
+    width: 20%;
+    text-align: center;
+}
+
 .navbar1 {
-    width: 50%;
-    color: red;
+    color: orange;
 }
 
 .navbar2 {
-    width: 25%;
-    color: black;
+    color: orange;
 }
 
-.navbar3 {
-    width: 25%;
-    color: blue;
+.logo {
+    margin-left: 20px;
 }
+
+
+
+
+/* /!\/!\/!\ */
+/* /!\ CONFIGURATION SUR LA PAGE D'ACCEUIL DE BASE /!\ */
+/* /!\/!\/!\ */
+
+section {
+    padding: 5%;
+}
+
+
+/* cartes d'actualités de la page d'acceuil */
+
+.card-actu {
+    display: inline-block;
+    color: gray;
+}
+
 
 
 /* /!\/!\/!\ */
@@ -27,11 +57,12 @@
 
 
 .rubriques_lien {
-    background-color: red;
-
+    background-color: #f8c471;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    margin-top: 30px;
 }
-
-
 
 .footer .a {
     color: orange;
@@ -44,21 +75,20 @@
 
 .partie_droite {
     display: inline;
-    padding: 35px;
+    padding: 55px;
 }
 
 .mentions_legales {
-    margin-left: 30%;
-    margin-top: 15px;
-    margin-right: auto;
     color: gray;
     width: auto;
-    font-style: italic;
-    font-size: small;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    text-align: center;
 }
 
-/* cartes d'actualités de la page d'acceuil */
-.card-actu {
-    display: inline-block;
+.date {
+    padding-top: 15px;
+    border-top: 1px solid gray;
+    text-align: center;
     color: gray;
 }
