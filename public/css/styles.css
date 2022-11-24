@@ -68,6 +68,8 @@ section {
 /* /!\ CONFIGURATION SUR LE FOOTER /!\ */
 /* /!\/!\/!\ */
 
+/* /!\/!\/!\ */
+/* configuration des rubriques du footer */
 
 .rubriques_lien {
     background-color:  #1c2833;
@@ -78,6 +80,19 @@ section {
     border-top: 1px solid orange;
 }
 
+.rubriques_lien a {
+    padding: 15px;
+    color: darkgray;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.rubriques_lien a:hover {
+    background-color: orange;
+    border-radius: 90%;
+    color: black;
+}
+
 .partie_gauche {
     display: inline;
 }
@@ -85,20 +100,33 @@ section {
 .partie_droite {
     display: inline;
 }
-
+/* /!\/!\/!\ */
+/* configuration du info-footer du footer */
 
 .info-foot {
-
+    padding: 55px;
+    border-bottom: 1px solid orange;
 }
 
-.utile1 {
-    display: inline;
+.info-foot a:hover {
+    color: gold;
 }
 
-.utile2 {
-    display: inline;
+.info-foot a {
+    padding: 5px;
+    color: orange;
+    display: block;
+    text-decoration: none;
 }
 
+/* les icones fontawesome */
+
+.gold {
+    color: darkgray;
+}
+
+/* /!\/!\/!\ */
+/* configuration sur la partie Copyright du footer */
 
 .copyright {
     color: gray;
@@ -123,6 +151,8 @@ section {
     color: black;
 }
 
+/* /!\/!\/!\ */
+/* configuration de la mises à jours / fin footer */
 
 .date {
     border-top: 1px solid orange;
