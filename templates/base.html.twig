@@ -2,10 +2,11 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Village_Rap -Ventes de disques de Rap{% endblock %}</title>
+        <title>{% block title %}Village_Rap - Ventes de disques de Rap{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         <link rel="stylesheet" href="https://bootswatch.com/5/yeti/bootstrap.min.css">
+        <link rel="stylesheet" href="/fontawesome-free-6.2.1-web/css/all.min.css">
         <link rel="stylesheet" href="/css/styles.css">
         {% block stylesheets %}{% endblock %}
     </head>
@@ -41,16 +42,14 @@
                 </div>
         </nav>
 
-        <div class="banniere">
-            <img src="/media/banniere1.png" width="100%">
-        </div>
+
 
 
     
     
-<div class="container">
+
         {% block body %} {% endblock %} 
-</div>
+
 
         {% block javascripts %} {% endblock %}
             <footer>
@@ -66,13 +65,28 @@
                         <a href="#" name="troisiemelien">CD RAP ES</a>
                     </div>
                 </div>
-
-                <div class="mentions_legales">
-                    <p>© Copyright - Projet crée en Symfony par  <a href="https://github.com/zeldacod5">Loucas Hérault</a> et <a href="https://github.com/kiirbs">Maxence Lallemand</a></p>
+                <div class="container">
+                    <div class="raw">
+                        <div class="col">
+                            <div class="contact">
+                                <p>CONTACT</p>
+                                <p>30 rue de poulainville, Amiens</p>
+                                <p>80000</p>
+                            </div>
+                            <div class="contact2">
+                                <p>LIENS</p>
+                                <p>30 rue de poulainville, Amiens</p>
+                                <p>80000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p><i class="fa-solid fa-copyright"></i>  Copyright - Projet crée en <a href="#" class="symfony">Symfony</a> par  <a href="https://github.com/zeldacod5"><i class="fa-brands fa-github"></i> Loucas Hérault</a> et <a href="https://github.com/kiirbs"><i class="fa-brands fa-github"></i> Maxence Lallemand</a>.</p>
                 </div>
                 <div class="date">
-                <p>Dernière mise à jour du site le :
-
+                    <p>Dernière mise à jour du site le : </p>
+                </div>
             </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>

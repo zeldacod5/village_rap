@@ -8,6 +8,14 @@ body {
 /* /!\ CONFIGURATION SUR LA NAVBAR /!\ */
 /* /!\/!\/!\ */
 
+.navbar a:hover {
+    color: gold;
+}
+
+.nav-item {
+
+}
+
 .navbar {
     background-color:   #1c2833   !important;
 }
@@ -41,6 +49,11 @@ section {
     padding: 5%;
 }
 
+.banniere {
+    border-bottom: 2px solid orange;
+    border-top: 2px solid orange;
+    border-radius: 500px;
+}
 
 /* cartes d'actualités de la page d'acceuil */
 
@@ -57,38 +70,51 @@ section {
 
 
 .rubriques_lien {
-    background-color: #f8c471;
+    background-color:  #1c2833;
     padding-top: 30px;
     padding-bottom: 30px;
     text-align: center;
-    margin-top: 30px;
-}
-
-.footer .a {
-    color: orange;
+    border-bottom: 1px solid orange;
+    border-top: 1px solid orange;
 }
 
 .partie_gauche {
     display: inline;
-
 }
 
 .partie_droite {
     display: inline;
-    padding: 55px;
 }
 
-.mentions_legales {
+
+.copyright {
     color: gray;
     width: auto;
-    padding-top: 40px;
-    padding-bottom: 20px;
     text-align: center;
+    margin-top: 25px;
 }
 
+.copyright a {
+    text-decoration: none;
+}
+
+.copyright a:hover {
+    color: gold;
+}
+
+.symfony {
+    color: lightgray;
+}
+
+.copyright a .symfony a:hover {
+    color: black;
+}
+
+
 .date {
-    padding-top: 15px;
-    border-top: 1px solid gray;
+    border-top: 1px solid orange;
     text-align: center;
     color: gray;
+    margin-top: 20px;
+    padding-top: 20px;
 }
