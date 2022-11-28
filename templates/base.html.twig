@@ -15,21 +15,21 @@
 
         <nav class="navbar navbar-expand-md navbar-light bg-light">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#"><img class="logo" src="/media/logo_test.png" width="140px"></a>
+                    <a class="navbar-brand" href="{{ path('acceuil') }}"><img class="logo" src="/media/logo_test.png" width="140px"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarColor03">
                         <ul class="navbar-nav me-auto">
                                 <li class="nav-item">
-                                <a class="nav-link active navbar1" href="#">
+                                <a class="nav-link active navbar1" href="{{ path('acceuil') }}">
                                 <span class="visually-hidden">(current)</span></a>
                                 </li>
                                 <li class="nav-item ps-2 ps-md-4" >
-                                <a class="nav-link navbar1" href="#">Boutique</a>
+                                <a class="nav-link navbar1" href="{{ path('catalogue') }}">Boutique</a>
                                 </li>
                                 <li class="nav-item ps-2 ps-md-4">
-                                <a class="nav-link navbar1" href="#">Actualités</a>
+                                <a class="nav-link navbar1" href="{{ path('acceuil') }}">Actualités</a>
                                 </li>
                                 <li class="nav-item ps-md-4">
                                 <a class="nav-link navbar2" href="#">Inscription</a>
@@ -75,15 +75,16 @@
                                     <p class="gold"><i class="fa-solid fa-house-user"></i></p>
                                     <p>AFPA AMIENS, 2022, VILLAGE GREEN</p>
                                     <p>30 rue de poulainville, Amiens, 80000</p>
+                                    <a href="{{ path('error') }}"><i class="fa-solid fa-xmark"></i></a>
 
                                 </div>
                             </div>
                             <div class="col-6 text-center">
                                 <div class="utile2">
                                     <p class="gold"><i class="fa-solid fa-link"></i></p>
-                                    <a href="">Qui sommes-nous?</a>
+                                    <a href="{{ path('qui') }}">Qui sommes-nous?</a>
                                     <a href="">Localisation</a>
-                                    <a href="">Contactez-nous</a>
+                                    <a href="https://github.com/zeldacod5">Contactez-nous</a>
                                     <a href="">Mentions légales</a>
                                 </div>
                             </div>

@@ -10,9 +10,10 @@ class Jeu1 extends Fixture
 {
     public function load(ObjectManager $manager): void
     {
-        $p1 = new Product();
-        $p1->setName("Guitares");
-        $manager->persist($p1);
+        $produit1 = new Product();
+        $produit1->setName("MC SOLAAR - Cinquième As");
+        $produit1->setLongLib("Album référence de MC Solaar");
+        $manager->persist($produit1);
 
         $manager->flush();
     }
