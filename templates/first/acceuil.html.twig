@@ -13,7 +13,17 @@
                         <div class="row">
                                 <div class="col-3">LES FILTRES
                                 </div>
-                                <div class="col-9">LE CARROUSSEL
+                                <div class="col-9">
+
+
+                                {% for cat in categories %}
+                                       <h2>
+                                                {{ cat.name }}
+                                        </h2>
+                                {% endfor %}
+
+
+                                </ul>
                                 </div>
                         </div>
         </section>
