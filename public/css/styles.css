@@ -89,7 +89,6 @@ section {
 
 .rubriques_lien a:hover {
     background-color: orange;
-    border-radius: 90%;
     color: black;
 }
 
@@ -113,7 +112,7 @@ section {
 }
 
 .info-foot a {
-    padding: 5px;
+    padding: 10px;
     color: orange;
     display: block;
     text-decoration: none;
