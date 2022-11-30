@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\ProductRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -9,10 +10,10 @@ use Symfony\Component\Routing\Annotation\Route;
 class CatalogueController extends AbstractController
 {
     #[Route('/catalogue', name: 'catalogue')]
-    public function catalogue(): Response
+    public function catalogue(ProductRepository $repo): Response
     {
         return $this->render('catalogue/catalogue.html.twig', [
-            'controller_name' => 'CatalogueController',
+            'products' => $repo->findAll(),
         ]);
     }
 
