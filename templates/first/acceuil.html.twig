@@ -5,27 +5,24 @@
 {% block body %}
 
         <div class="banniere">
-            <img src="/media/banniere3.png" width="100%">
+        <img src="/media/banniere3.png" width="100%" height: "30px">
         </div>
 
         <section>
 
                         <div class="row">
-                                <div class="col-3">LES FILTRES
+                                <div class="col-3">
+                                LES FILTRES
                                 </div>
                                 <div class="col-9">
-
-
-                                {% for cat in categories %}
-                                       <h2>
-                                                {{ cat.name }}
-                                        </h2>
-                                {% endfor %}
-
-
-                                </ul>
+                                        <ul>
+                                                {% for cat in categories %}
+                                                        <h2> {{ cat.name }} </h2>
+                                                {% endfor %}
+                                        </ul>
                                 </div>
                         </div>
+
         </section>
 
 
