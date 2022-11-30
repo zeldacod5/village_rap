@@ -1,7 +1,9 @@
 body {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: orange;
-    background-color:   #1c2833   !important;
+    color: black;
+    background-color: #DCDCDC !important;
+/*    background-color:   #1c2833   !important; */
+/*    background-color: #F2F3F5; */
 }
 
 /* /!\/!\/!\ */
@@ -12,26 +14,23 @@ body {
     color: gold;
 }
 
-.nav-item {
-
-}
-
 .navbar {
-    background-color:   #1c2833   !important;
+background-color:   #1c2833   !important;
+   /* background-color: #F2F3F5; */
 }
 
 .navbar-brand {
-    color: orange;
+    color: gray;
     width: 20%;
     text-align: center;
 }
 
 .navbar1 {
-    color: orange;
+    color: gray;
 }
 
 .navbar2 {
-    color: orange;
+    color: gray;
 }
 
 .logo {
@@ -68,21 +67,26 @@ section {
 /* /!\ CONFIGURATION SUR LE FOOTER /!\ */
 /* /!\/!\/!\ */
 
+footer {
+    background-color: #F2F3F5 !important;
+}
+
 /* /!\/!\/!\ */
 /* configuration des rubriques du footer */
 
 .rubriques_lien {
-    background-color:  #1c2833;
+    /* background-color:  #1c2833; */
+    background-color: #F2F3F5;
     padding-top: 30px;
     padding-bottom: 30px;
     text-align: center;
-    border-bottom: 1px solid orange;
-    border-top: 1px solid orange;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
 }
 
 .rubriques_lien a {
     padding: 15px;
-    color: darkgray;
+    color: gray;
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -103,19 +107,23 @@ section {
 /* configuration du info-footer du footer */
 
 .info-foot {
-    padding: 55px;
-    border-bottom: 1px solid orange;
+/*    background-color: #1c2833; */
+/*    background-color: #696969; */
+/*    background-color: #F2F3F5; */
+    background-color: #DDDDDD;
+    padding: 65px;
 }
 
 .info-foot a:hover {
-    color: gold;
+    color: black;
 }
 
 .info-foot a {
-    padding: 10px;
-    color: orange;
     display: block;
     text-decoration: none;
+    padding: 3px;
+    color: gray;
+    size: 5px;
 }
 
 /* les icones fontawesome */
@@ -124,14 +132,20 @@ section {
     color: gray;
 }
 
+.pasgold {
+    color: gray;
+}
+
 /* /!\/!\/!\ */
 /* configuration sur la partie Copyright du footer */
 
 .copyright {
+/*    background-color:   #1c2833   !important; */
+    background-color: #F2F3F5;
     color: gray;
-    width: auto;
     text-align: center;
-    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid gray;
 }
 
 .copyright a {
@@ -139,11 +153,11 @@ section {
 }
 
 .copyright a:hover {
-    color: gold;
+    color: black !important;
 }
 
 .symfony {
-    color: lightgray;
+    color: black !important;
 }
 
 .copyright a .symfony a:hover {
@@ -154,9 +168,11 @@ section {
 /* configuration de la mises à jours / fin footer */
 
 .date {
-    border-top: 1px solid orange;
+/*    background-color:   #1c2833   !important; */
+    background-color: #808080 !important;
     text-align: center;
-    color: gray;
-    margin-top: 20px;
-    padding-top: 20px;
+    color: white;
+    margin-top: 10px;
+    padding-top: 17px;
+    padding-bottom:1px;
 }
