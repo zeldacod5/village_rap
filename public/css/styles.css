@@ -8,8 +8,8 @@
 
 .navbar {
 /* background-color:   white   !important; */
-background-color: #787878 !important;
-   /* background-color: #F2F3F5; */
+    background-color: #787878 !important;
+/* background-color: #F2F3F5; */
 }
 
 .navbar-brand {
@@ -26,8 +26,9 @@ background-color: #787878 !important;
     color: white;
 }
 
-.logo {
+.logo img {
     margin-left: 20px;
+    background-color: #787878;
 }
 
 
@@ -80,7 +81,7 @@ footer {
     padding-top: 30px;
     padding-bottom: 30px;
     text-align: center;
-    border-top: 1px solid gray;
+    border-top: 1px solid black;
 
 }
 
