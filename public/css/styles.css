@@ -1,36 +1,29 @@
-body {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: black;
-    background-color: #DCDCDC !important;
-/*    background-color:   #1c2833   !important; */
-/*    background-color: #F2F3F5; */
-}
-
 /* /!\/!\/!\ */
 /* /!\ CONFIGURATION SUR LA NAVBAR /!\ */
 /* /!\/!\/!\ */
 
 .navbar a:hover {
-    color: gold;
+    color: orange;
 }
 
 .navbar {
-background-color:   #1c2833   !important;
+/* background-color:   white   !important; */
+background-color: #787878 !important;
    /* background-color: #F2F3F5; */
 }
 
 .navbar-brand {
-    color: gray;
+    color: white;
     width: 20%;
     text-align: center;
 }
 
 .navbar1 {
-    color: gray;
+    color: white;
 }
 
 .navbar2 {
-    color: gray;
+    color: white;
 }
 
 .logo {
@@ -44,14 +37,19 @@ background-color:   #1c2833   !important;
 /* /!\ CONFIGURATION SUR LA PAGE D'ACCEUIL DE BASE /!\ */
 /* /!\/!\/!\ */
 
-section {
-    padding: 5%;
+body {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #DCDCDC !important;
+/*    background-color:   #1c2833   !important; */
+/*    background-color: #F2F3F5; */
 }
 
-.banniere {
-    border-bottom: 2px solid orange;
-    border-top: 2px solid orange;
-    border-radius: 500px;
+/* /!\/!\/!\ */
+/* /!\ CONFIGURATION SUR LA PAGE BOUTIQUE /!\ */
+/* /!\/!\/!\ */
+
+section {
+    padding: 5%;
 }
 
 /* cartes d'actualités de la page d'acceuil */
@@ -68,25 +66,27 @@ section {
 /* /!\/!\/!\ */
 
 footer {
-    background-color: #F2F3F5 !important;
+/*    background-color: #F2F3F5 !important; */
+/*    background-color: #8C8680 !important; */
+    background-color: #787878 !important;
 }
 
 /* /!\/!\/!\ */
 /* configuration des rubriques du footer */
+/* liens vers les radios */
 
 .rubriques_lien {
-    /* background-color:  #1c2833; */
-    background-color: #F2F3F5;
+    background-color: #787878;
     padding-top: 30px;
     padding-bottom: 30px;
     text-align: center;
     border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
+
 }
 
 .rubriques_lien a {
     padding: 15px;
-    color: gray;
+    color: white;
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -105,59 +105,65 @@ footer {
 }
 /* /!\/!\/!\ */
 /* configuration du info-footer du footer */
+/* tout les liens du footer */
 
 .info-foot {
-/*    background-color: #1c2833; */
-/*    background-color: #696969; */
-/*    background-color: #F2F3F5; */
-    background-color: #DDDDDD;
-    padding: 65px;
+    background-color: #9E9E9E;
+    padding: 55px;
+    border-top: 1px solid black;
 }
 
 .info-foot a:hover {
-    color: black;
+    color: white;
 }
 
 .info-foot a {
     display: block;
     text-decoration: none;
-    padding: 3px;
-    color: gray;
+    padding: 5px;
+/*    color: #463F32; */
+    color: #373736;
     size: 5px;
 }
 
 /* les icones fontawesome */
 
 .gold {
-    color: gray;
+    color: black;
+    
 }
 
 .pasgold {
-    color: gray;
+    color: black;
 }
 
 /* /!\/!\/!\ */
 /* configuration sur la partie Copyright du footer */
 
 .copyright {
-/*    background-color:   #1c2833   !important; */
-    background-color: #F2F3F5;
-    color: gray;
+/*    background-color: #1c2833;  */
+/*    background-color: #F2F3F5; */ 
+/*    background-color: ##8C8680; */
+/*    background-color: #302721; */
+    background-color: #787878; 
+    color: white;
     text-align: center;
     padding-top: 20px;
-    border-top: 1px solid gray;
+    border-top: 1px solid #463F32;
+    border-bottom: 1px solid #463F32
 }
 
 .copyright a {
     text-decoration: none;
+    color: lightblue;
 }
 
 .copyright a:hover {
-    color: black !important;
+    color: white !important;
 }
 
 .symfony {
-    color: black !important;
+    color: lightblue !important;
 }
 
 .copyright a .symfony a:hover {
@@ -168,11 +174,10 @@ footer {
 /* configuration de la mises à jours / fin footer */
 
 .date {
-/*    background-color:   #1c2833   !important; */
-    background-color: #808080 !important;
+    background-color: #787878 !important;
     text-align: center;
-    color: white;
+    color: white ;
     margin-top: 10px;
-    padding-top: 17px;
+    padding-top: 11px;
     padding-bottom:1px;
 }
