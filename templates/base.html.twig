@@ -15,7 +15,7 @@
 
         <nav class="navbar navbar-expand-md navbar-light bg-light">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="{{ path('acceuil') }}"><img class="logo" src="/media/logo5.png" width="120px"></a>
+                    <a class="navbar-brand" href="{{ path('acceuil') }}"><img class="logo" src="/media/logo5.png" width="150px"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     </button>
@@ -28,7 +28,10 @@
                                 <li class="nav-item ps-2 ps-md-4" >
                                 <a class="nav-link navbar1" href="{{ path('catalogue') }}"><i class="fa-solid fa-compact-disc"></i>   BOUTIQUE</a>
                                 </li>
-                                <li class="nav-item ps-md-4">
+                                <li class="nav-item ps-2 ps-md-4" >
+                                <a class="nav-link navbar1" href="{{ path('catalogue') }}"><i class="fa-solid fa-gem"></i>  PROMO</a>
+                                </li>
+                        </ul>
                                 <a class="nav-link navbar2" href="#"><i class="fa-solid fa-user-plus"></i>   INSCRIPTION</a>
                                 </li>
                                 <li class="nav-item ps-md-4">
@@ -38,14 +41,6 @@
                     </div>
                 </div>
         </nav>
-            <div class="barre">
-            
-            </div>
-
-
-
-    
-    
 
         {% block body %} {% endblock %} 
 

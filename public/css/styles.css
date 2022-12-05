@@ -27,7 +27,14 @@
 }
 
 
+/* /!\/!\/!\ */
+/* /!\ EN DESSOUS DE LA NAVBAR /!\ */
+/* /!\/!\/!\ */
 
+.barre {
+    background-color: black;
+    padding: 40px;
+}
 
 
 /* /!\/!\/!\ */
