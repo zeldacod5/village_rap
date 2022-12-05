@@ -7,29 +7,24 @@
 }
 
 .navbar {
-/* background-color:   white   !important; */
-    background-color: #787878 !important;
-/* background-color: #F2F3F5; */
+/*    background-color: #787878 !important; gros gris*/
+/*    background-color: #EEEEEE !important; */
+    background-color: white !important;
 }
 
-.navbar-brand {
-    color: white;
-    width: 20%;
-    text-align: center;
+.nabvar-brand {
+
 }
 
 .navbar1 {
-    color: white;
+    color: black;
+    font-style: bold;
 }
 
 .navbar2 {
-    color: white;
+    color: black;
 }
 
-.logo img {
-    margin-left: 20px;
-    background-color: #787878;
-}
 
 
 
@@ -41,8 +36,6 @@
 body {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-color: #DCDCDC !important;
-/*    background-color:   #1c2833   !important; */
-/*    background-color: #F2F3F5; */
 }
 
 /* /!\/!\/!\ */
@@ -122,7 +115,6 @@ footer {
     display: block;
     text-decoration: none;
     padding: 5px;
-/*    color: #463F32; */
     color: #373736;
     size: 5px;
 }
@@ -142,10 +134,7 @@ footer {
 /* configuration sur la partie Copyright du footer */
 
 .copyright {
-/*    background-color: #1c2833;  */
-/*    background-color: #F2F3F5; */ 
-/*    background-color: ##8C8680; */
-/*    background-color: #302721; */
+
     background-color: #787878; 
     color: white;
     text-align: center;
