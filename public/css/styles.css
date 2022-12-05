@@ -12,9 +12,10 @@
     background-color: white !important;
 }
 
-.nabvar-brand {
-
+.navbar-brand a {
+    left: 30px;
 }
+
 
 .navbar1 {
     color: black;
