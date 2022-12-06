@@ -12,7 +12,7 @@
     </head>
 
     <body>
-
+<div class="container">
         <nav class="navbar navbar-expand-md navbar-light bg-light">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="{{ path('acceuil') }}"><img class="logo" src="/media/logo5.png" width="150px"></a>
@@ -35,12 +35,30 @@
                                 <a class="nav-link navbar2" href="#"><i class="fa-solid fa-user-plus"></i>   INSCRIPTION</a>
                                 </li>
                                 <li class="nav-item ps-md-4">
-                                <a class="nav-link navbar2" href="#"><i class="fa-regular fa-user"></i>    CONNEXION</a>
+                                <a class="nav-link navbar2" href="#"><i class="fa-regular fa-user"></i> CONNEXION</a>
                                 </li>
                         </ul>
                     </div>
                 </div>
         </nav>
+</div>
+        
+        <div class="barre">
+            <form class="d-flex" id="chienbarre">
+                <input class="form-control me-sm-2" type="text" placeholder="Recherche un produit spécifique">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <div class="panier">
+                <i class="fa-solid fa-basket-shopping"></i>
+                </div>
+                <div class="livraison">
+                <p><i class="fa-solid fa-dolly"></i> Livraison gratuite à partir de 15 €</p></i>
+                </div>
+
+            </form>
+            
+
+        </div>
+        
 
         {% block body %} {% endblock %} 
 

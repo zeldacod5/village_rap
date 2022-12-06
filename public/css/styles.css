@@ -32,9 +32,50 @@
 /* /!\/!\/!\ */
 
 .barre {
-    background-color: black;
-    padding: 40px;
+/*    background-color: #EEEEEE; */
+    background-color:  	#F0FFFF
+    display: flex;
+    border: 1px solid black;
+    padding: 15px;
 }
+
+#chienbarre {
+    width: 100%;
+}
+
+.form-control {
+    margin-left: 50px;
+    width: 30%;
+}
+
+.panier {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    justify-content: center;
+}
+
+.livraison {
+    display: flex;
+    color: black;
+    margin-top: 22px;
+}
+
+
+.btn {
+    padding: 15px;
+    background-color:  	#F0FFFF;
+    color: black;
+}
+
+.btn {
+    background-color: #EEEEEE;
+}
+
+.fa-basket-shopping {
+    color: black;
+}
+
 
 
 /* /!\/!\/!\ */
@@ -43,7 +84,7 @@
 
 body {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color: #DCDCDC !important;
+/*    background-color: #DCDCDC !important; gris clair */
 }
 
 /* /!\/!\/!\ */
