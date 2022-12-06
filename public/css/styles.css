@@ -33,7 +33,7 @@
 
 .barre {
 /*    background-color: #EEEEEE; */
-    background-color:  	#F0FFFF
+    background-color:  	#F0FFFF;
     display: flex;
     border: 1px solid black;
     padding: 15px;
