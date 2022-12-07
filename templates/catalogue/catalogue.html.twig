@@ -33,6 +33,18 @@
                         <h1>Categorie/Souscategorie</h1>
                     </div>
 
+                    <div class="col-12">
+                    
+                    {% for cat in categories %}
+                        <div class="col-4">
+                            <a href="/souscategories/{{ cat.id }}">
+                                {{ cat.name }}
+                            </a>
+                        </div>
+                    {% endfor %}
+
+                    </div>
+
                     <div class="carrouselCatalogue">
                         <div class="col-md-12">
 			                <h2>TitreCarousel</h2>

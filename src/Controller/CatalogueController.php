@@ -3,49 +3,59 @@
 namespace App\Controller;
 
 use App\Repository\ProductRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Repository\CategoryRepository;
+use App\Repository\SubcategoryRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class CatalogueController extends AbstractController
 {
+    // affiche la liste des catégories -> Page 1
     #[Route('/catalogue', name: 'catalogue')]
-    public function catalogue(ProductRepository $repo): Response
+    public function catalogue(ProductRepository $repo, CategoryRepository $repo_categorie): Response
     {
+
+        $categories = $repo ->findAll();
+
         return $this->render('catalogue/catalogue.html.twig', [
             'products' => $repo->findAll(),
+            'categories' => $repo_categorie->findAll()
         ]);
     }
 
-    #[Route('/categories', name: 'categories')]
-    public function categories(): Response
+    // affiche la liste des sous-catégories -> Page 2
+    #[Route('/souscategories/{id}', name: 'souscategories')]
+    public function souscategories(SubcategoryRepository $repo,  $id): Response
     {
-        return $this->render('catalogue/categories.html.twig', [
-            'controller_name' => 'CatalogueController',
+        $liste = $repo->findBy([ "category" => $id]);
+        
+
+        return $this->render('catalogue/souscategories.html.twig', [
+            // nom de la variable dans twig
+            'liste' => $liste
         ]);
     }
 
-    #[Route('/subcategories', name: 'subcategories')]
-    public function subcategories(): Response
+    // afficher la liste des produits d'une sous-catégories -> Page 3
+    #[Route('/produits/{id}', name: 'produits')]
+    public function produits(ProductRepository $repo, $id): Response
     {
-        return $this->render('catalogue/subcategories.html.twig', [
-            'controller_name' => 'CatalogueController',
+        $liste = $repo->findBy([ "subcategorie" => $id]);
+        
+        return $this->render('catalogue/produits.html.twig', [
+            'liste' => $liste
         ]);
     }
 
-    #[Route('/product', name: 'product')]
-    public function product(): Response
+    // affiche le detail d'un produit -> Page 4
+    #[Route('/details/{id}', name: 'details')]
+    public function details(ProductRepository $repo, $id): Response
     {
-        return $this->render('catalogue/product.html.twig', [
-            'controller_name' => 'CatalogueController',
-        ]);
-    }
-
-    #[Route('/details', name: 'details')]
-    public function details(): Response
-    {
+        $liste = $repo->findBy([ "detail" => $id]);
+        
         return $this->render('catalogue/details.html.twig', [
-            'controller_name' => 'CatalogueController',
+            'liste' => $liste
         ]);
     }
 }

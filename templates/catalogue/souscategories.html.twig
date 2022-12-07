@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+
+    {# liste = nom de la variable dans le controleur #}
+    {% for item in liste %}
+        <div>
+            {{ item.name }}
+        </div>
+    {% endfor %}
+
+{% endblock %}

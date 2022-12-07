@@ -62,6 +62,7 @@ class Jeu1 extends Fixture
         $produit1 = new Product();
         $produit1->setName("MC SOLAAR - Cinquième As");
         $produit1->setLongLib("Album référence de MC Solaar");
+        // $produit1
         $manager->persist($produit1);
         $produit1->addSubcategory($souscat5);
 
