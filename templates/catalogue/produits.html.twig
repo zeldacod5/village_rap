@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+
+    {# liste = nom de la variable dans le controleur #}
+
+    {% for item in liste %}
+    
+    <div class="container">
+        <div class="row">
+            <div class="page-produit">
+                <img src="/media/{{ item.picture }}" alt="" height="300px" width="auto">
+            
+            <a href="/details/{{ item.id }}">
+                {{ item.name }}
+            </a>
+            </div>
+        </div>
+    </div>
+
+    {% endfor %}
+
+{% endblock %}

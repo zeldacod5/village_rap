@@ -28,7 +28,7 @@ class Subcategory
     #[ORM\ManyToOne(inversedBy: 'subcategories')]
     private ?Category $category = null;
 
-    #[ORM\ManyToMany(targetEntity: Product::class, mappedBy: 'subcategory')]
+    #[ORM\OneToMany(targetEntity: Product::class, mappedBy: 'subcategory')]
     private Collection $products;
 
     public function __construct()
