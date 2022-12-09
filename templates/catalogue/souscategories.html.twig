@@ -4,11 +4,22 @@
 
 {% block body %}
 
-    {# liste = nom de la variable dans le controleur #}
-    {% for item in liste %}
-        <div>
-            {{ item.name }}
+    <div class="container">
+        <div class="row">
+                    <div class="col-12">
+                            
+                    {% for cat in liste %}
+                        <div class="col-4">
+                            <a href="/produits/{{ cat.id }}">
+                                {{ cat.name }}
+                                </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
         </div>
-    {% endfor %}
-
+        
 {% endblock %}
+
+
+

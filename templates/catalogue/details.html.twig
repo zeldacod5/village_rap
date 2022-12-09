@@ -3,5 +3,21 @@
 {% block title %}{% endblock %}
 
 {% block body %}
+    <div class="container">
+        <div class="row">
+            <h1></h1>
 
+            <div>
+                {{ produit.name }}
+            </div>
+            <div>
+                {{ produit.longLib }}
+            </div>
+            <div>
+                <img src="/media/{{ produit.picture }}" />
+            </div>
+
+        </div>
+    </div>
+    
 {% endblock %}

@@ -41,7 +41,8 @@ class CatalogueController extends AbstractController
     #[Route('/produits/{id}', name: 'produits')]
     public function produits(ProductRepository $repo, $id): Response
     {
-        $liste = $repo->findBy([ "subcategorie" => $id]);
+        // findBy avec le parametre subcategory (nom de la propriété dans l'entité produit)
+        $liste = $repo->findBy([ "subcategory" => $id]);
         
         return $this->render('catalogue/produits.html.twig', [
             'liste' => $liste
@@ -52,10 +53,10 @@ class CatalogueController extends AbstractController
     #[Route('/details/{id}', name: 'details')]
     public function details(ProductRepository $repo, $id): Response
     {
-        $liste = $repo->findBy([ "detail" => $id]);
+        $produit = $repo->find($id);
         
         return $this->render('catalogue/details.html.twig', [
-            'liste' => $liste
+            'produit' => $produit
         ]);
     }
 }

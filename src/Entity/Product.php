@@ -2,11 +2,12 @@
 
 namespace App\Entity;
 
-use App\Repository\ProductRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
+use App\Entity\Subcategory;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\ProductRepository;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
 
 #[ORM\Entity(repositoryClass: ProductRepository::class)]
 class Product
@@ -49,8 +50,8 @@ class Product
     #[ORM\ManyToOne(inversedBy: 'products')]
     private ?Supplier $supplier = null;
 
-    #[ORM\ManyToMany(targetEntity: Subcategory::class, inversedBy: 'products')]
-    private Collection $subcategory;
+    #[ORM\ManyToOne(targetEntity: Subcategory::class, inversedBy: 'products')]
+    private ?Subcategory $subcategory;
 
     #[ORM\ManyToOne(inversedBy: 'product')]
     private ?ComposedBy $composedBy = null;
@@ -60,7 +61,6 @@ class Product
 
     public function __construct()
     {
-        $this->subcategory = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -187,7 +187,7 @@ class Product
 
         return $this;
     }
-
+    
     public function getSupplier(): ?Supplier
     {
         return $this->supplier;
@@ -203,23 +203,14 @@ class Product
     /**
      * @return Collection<int, Subcategory>
      */
-    public function getSubcategory(): Collection
+    public function getSubcategory(): ?Subcategory
     {
         return $this->subcategory;
     }
 
-    public function addSubcategory(Subcategory $subcategory): self
+    public function setSubcategory(?Subcategory $subcategory): self
     {
-        if (!$this->subcategory->contains($subcategory)) {
-            $this->subcategory->add($subcategory);
-        }
-
-        return $this;
-    }
-
-    public function removeSubcategory(Subcategory $subcategory): self
-    {
-        $this->subcategory->removeElement($subcategory);
+        $this->subcategory = $subcategory;
 
         return $this;
     }

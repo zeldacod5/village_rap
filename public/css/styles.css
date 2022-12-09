@@ -36,7 +36,7 @@
     background-color:  	#DCDCDC;
     display: flex;
     border: 1px solid black;
-    padding: 15px;
+    padding:12px;
 }
 
 #chienbarre {
@@ -44,7 +44,7 @@
 }
 
 .form-control {
-    margin-left: 50px;
+    margin-left: 10%;
     width: 30%;
 }
 
@@ -83,25 +83,30 @@
 /* /!\ CONFIGURATION SUR LA PAGE D'ACCEUIL DE BASE /!\ */
 /* /!\/!\/!\ */
 
+
 body {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 /*    background-color: #DCDCDC !important; gris clair */
 }
 
+
+
+/* /!\/!\/!\ */
+/* /!\ CONFIGURATION SUR LA PAGE ACCEUIL /!\ */
+/* /!\/!\/!\ */
+
+.banniere {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 62%;
+}
+
+
+
 /* /!\/!\/!\ */
 /* /!\ CONFIGURATION SUR LA PAGE BOUTIQUE /!\ */
 /* /!\/!\/!\ */
-
-section {
-    padding: 5%;
-}
-
-/* cartes d'actualités de la page d'acceuil */
-
-.card-actu {
-    display: inline-block;
-    color: gray;
-}
 
 .carrouselCatalogue {
     padding: 15px;
