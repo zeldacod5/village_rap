@@ -32,7 +32,7 @@ class CatalogueController extends AbstractController
         
 
         return $this->render('catalogue/souscategories.html.twig', [
-            // nom de la variable dans twig
+            // nom de la variable twig
             'liste' => $liste
         ]);
     }
