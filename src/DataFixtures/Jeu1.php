@@ -23,17 +23,6 @@ class Jeu1 extends Fixture
         $cat2->setPicture("rapus.jpeg");
         $manager->persist($cat2);
 
-        $cat3 = new Category();
-        $cat3->setName("RAP Espagnol");
-        $cat3->setPicture("rapespagnol.jpeg");
-        $manager->persist($cat3);
-
-
-
-
-
-
-
 
 
         $souscat1 = new Subcategory();
@@ -45,12 +34,6 @@ class Jeu1 extends Fixture
         $souscat2->setName("Old School");
         $manager->persist($souscat2);
         $souscat2->setCategory($cat2);
-
-        $souscat3 = new Subcategory();
-        $souscat3->setName("Old School");
-        $manager->persist($souscat3);
-        $souscat3->setCategory($cat3);
-
 
 
 
@@ -64,18 +47,12 @@ class Jeu1 extends Fixture
         $manager->persist($souscat5);
         $souscat5->setCategory($cat2);
 
-        $souscat6 = new Subcategory();
-        $souscat6->setName("New School");
-        $manager->persist($souscat6);
-        $souscat6->setCategory($cat3);
-
-
-
 
         $produit1 = new Product();
         $produit1->setName("MC SOLAAR - Cinquième As");
         $produit1->setLongLib("Album référence de MC Solaar");
         $produit1->setPicture("solaarmc.jpg");
+        
         // $produit1
         $manager->persist($produit1);
         $produit1->setSubcategory($souscat1);
