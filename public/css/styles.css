@@ -231,3 +231,42 @@ footer {
     padding-top: 11px;
     padding-bottom:1px;
 }
+
+
+
+
+/* /!\/!\/!\ */
+/* /!\ CONFIGURATION SUR LA PAGE DES SOUSCATEGORIES/!\ */
+/* /!\/!\/!\ */
+
+.souscat {
+    padding: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+.souscat a {
+    border: 1px solid black;
+    color: black;
+    padding: 50px;
+    background-color: gainsboro;
+    margin-left: 5px;
+}
+
+
+/* /!\/!\/!\ */
+/* /!\ CONFIGURATION SUR LA PAGE DES PRODUITS!\ */
+/* /!\/!\/!\ */
+
+
+.div-produit {
+    padding: 55px;
+    border: green solid 1px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
