@@ -17,15 +17,19 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-4">
-                    <ul>
-                        <li>option 1</li>
-                        <li>option 2</li>
-                        <li>option 3</li>
-                        <li>option 4</li>
-                        <li>option 5</li>
-                        <li>...</li>
-                    </ul>
+                <div class="col-4 leslistes">
+
+                    {% for cat in categories %}
+                        <div class="liste">
+                            <ul>
+                                <li>
+                                    <a href="/souscategories/{{ cat.id }}"> {{ cat.name }} </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    {% endfor %}
+
                 </div>
 
                 <div class="col-8">

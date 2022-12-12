@@ -106,6 +106,41 @@ class Jeu1 extends Fixture
         $manager->persist($produit8);
         $produit8->setSubcategory($souscat1);
 
+        $produit9 = new Product();
+        $produit9->setName("50 CENT - The Massacre");
+        $produit9->setLongLib("Le massacre, album fait par fifty avec bcp de guest!");
+        $produit9->setPicture("50cent2.jpg");
+        $manager->persist($produit9);
+        $produit9->setSubcategory($souscat2);
+
+        $produit10 = new Product();
+        $produit10->setName("EMINEM - The Eminem Show");
+        $produit10->setLongLib("Album de dingue des années 2000");
+        $produit10->setPicture("eminem1.jpeg");
+        $manager->persist($produit10);
+        $produit10->setSubcategory($souscat2);
+
+        $produit11 = new Product();
+        $produit11->setName("NOTORIOUS BIG - Ready to Die");
+        $produit11->setLongLib("La c'est nimp..");
+        $produit11->setPicture("notorious1.jpg");
+        $manager->persist($produit11);
+        $produit11->setSubcategory($souscat2);
+
+        $produit12 = new Product();
+        $produit12->setName("KENDRICK LAMAR - Good Kid, M.A.A.D. City");
+        $produit12->setLongLib("La c'est reouf..");
+        $produit12->setPicture("kendrick1.jpg");
+        $manager->persist($produit12);
+        $produit12->setSubcategory($souscat5);
+
+        $produit13 = new Product();
+        $produit13->setName("KENDRICK LAMAR - Damn");
+        $produit13->setLongLib("La c'est relou même.");
+        $produit13->setPicture("kendrick2.jpg");
+        $manager->persist($produit13);
+        $produit13->setSubcategory($souscat5);
+
 
 
         $manager->flush();

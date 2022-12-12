@@ -241,10 +241,10 @@ footer {
 
 .souscat {
     padding: 100px;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 15px;
     margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -254,6 +254,17 @@ footer {
     padding: 50px;
     background-color: gainsboro;
     margin-left: 5px;
+    margin-right: 5px;
+}
+
+.image-souscat1 {
+    width: 100px;
+    height: auto;
+}
+
+.image-souscat1 {
+    width: 100px;
+    height: auto;
 }
 
 
@@ -270,3 +281,8 @@ footer {
     margin-top: 15px;
     margin-bottom: 15px;
 }
+
+
+/* /!\/!\/!\ */
+/* /!\ CONFIGURATION SUR LA PAGE CATALOGUE /!\ */
+/* /!\/!\/!\ */
