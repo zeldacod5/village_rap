@@ -258,12 +258,12 @@ footer {
 }
 
 .image-souscat1 {
-    width: 100px;
+    width: 115px;
     height: auto;
 }
 
 .image-souscat1 {
-    width: 100px;
+    width: 125px;
     height: auto;
 }
 
@@ -286,3 +286,18 @@ footer {
 /* /!\/!\/!\ */
 /* /!\ CONFIGURATION SUR LA PAGE CATALOGUE /!\ */
 /* /!\/!\/!\ */
+
+.leslistes {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid green;
+}
+
+.leslistes li {
+    margin-top: 10px;
+}
+
+.carrouselCatalogue {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
