@@ -33,11 +33,14 @@
                                 </li>
                         </ul>
                                 <a class="nav-link navbar2" href="#"><i class="fa-solid fa-user-plus"></i>   INSCRIPTION</a>
-                                </li>
-                                <li class="nav-item ps-md-4">
-                                <a class="nav-link navbar2" href="#"><i class="fa-regular fa-user"></i> CONNEXION</a>
-                                </li>
-                        </ul>
+                                <i class="fa-regular fa-user"></i>
+                                    <div class="pannel-inscription">
+                                        {% if app.user %}
+                                        <a href="/logout"> SE DECONNECTER</a>
+                                        {% else %}
+                                        <a href="/login"> CONNEXION</a>
+                                        {% endif %}
+                                    </div>
                     </div>
                 </div>
         </nav>
@@ -48,7 +51,7 @@
                 <input class="form-control me-sm-2" type="text" placeholder="Recherche un produit spécifique">
                 <button class="btn btn-secondary my-2 my-sm-0" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                 <div class="panier">
-                <i class="fa-solid fa-basket-shopping"></i>
+                <a href="/panier"><i class="fa-solid fa-basket-shopping"></a></i>
                 </div>
                 <div class="livraison">
                 <p><i class="fa-solid fa-dolly"></i> Livraison gratuite à partir de 15 €</p></i>

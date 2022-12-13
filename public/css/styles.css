@@ -273,15 +273,24 @@ footer {
 /* /!\/!\/!\ */
 
 
+/* Réglage des div de la boucle */
 .div-produit {
     padding: 55px;
-    border: green solid 1px;
+    border: black solid 1px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 15px;
     margin-bottom: 15px;
 }
 
+.titre-produit {
+    font-weight: bold;
+}
+
+.annee-produit {
+    font-style: italic;
+    color: grey;
+}
 
 /* /!\/!\/!\ */
 /* /!\ CONFIGURATION SUR LA PAGE CATALOGUE /!\ */
@@ -300,4 +309,13 @@ footer {
 .carrouselCatalogue {
     margin-top: 15px;
     margin-bottom: 15px;
+}
+
+
+/* /!\/!\/!\ */
+/* /!\ CONFIGURATION SUR LA PAGE DE CONNEXION/!\ */
+/* /!\/!\/!\ */
+
+.form-connexion {
+    padding: 5%;
 }

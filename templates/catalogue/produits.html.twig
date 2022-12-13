@@ -10,8 +10,8 @@
     
     <div class="container">
         <div class="row">
-            <div class="col-4 div-produit">
-                <div class="titre-produit">chien-titre
+            <div class="div-produit">
+                <div class="titre-produit"> {{ item.name }}
                 </div>
                 <div class="image-produit">
                 <img src="/media/{{ item.picture }}" alt="" height="300px" width="auto">
@@ -19,19 +19,16 @@
                 <div class="lien-produit">
                     <a href="/details/{{ item.id }}"> {{ item.name }} </a>
                 </div>
-                <div class="soustitre-produit">chien-soustitre
+                <div class="soustitre-produit"> {{ item.longlib }}
                 </div>
-                <div class="prix-produit">chien-prix
+                <div class="prix-produit"> {{ item.price }}
                 </div>
-                <div class="annee-produit">2010
+                <div class="annee-produit"> {{ item.shortlib }}
                 </div>
             </div>
         </div>
     </div>
 
-
-        </div>
-</div>
     {% endfor %}
 
 {% endblock %}

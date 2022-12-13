@@ -16,7 +16,10 @@
         <div>
             <img src="/media/{{ produit.picture }}" />
         </div>
-
+        <div class="price">
+        {{ produit.price }}
+        </div>
+        <button class="button-sm"><a href="/add/{{produit.id}}">ajouter au panier</a></button>
     </div>
 </div>
 
