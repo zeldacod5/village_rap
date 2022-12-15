@@ -32,8 +32,9 @@
 /* /!\/!\/!\ */
 
 .barre {
-/*    background-color: #EEEEEE; */
-    background-color:  	#DCDCDC;
+    background-color: #EEEEEE;
+/*    background-color:  	#DCDCDC; */
+
     display: flex;
     border: 1px solid black;
     padding:12px;
@@ -275,12 +276,13 @@ footer {
 
 /* Réglage des div de la boucle */
 .div-produit {
-    padding: 55px;
+    padding: 20px;
     border: black solid 1px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 15px;
     margin-bottom: 15px;
+    min-height: 500px;
 }
 
 .titre-produit {
@@ -318,4 +320,8 @@ footer {
 
 .form-connexion {
     padding: 5%;
+}
+
+.annee-produit {
+    color: red;
 }
