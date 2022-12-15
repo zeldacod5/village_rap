@@ -10,94 +10,75 @@
         {% set x = 1 %}
         {% for product in products %}
             {% if (count % 4 == 0) %}
-                {% set count = x + 1 %}
+                {% set x = x + 1 %}
             {% endif %}
             {% set count = count + 1 %}
         {% endfor %}
 
         <div class="container">
             <div class="row">
-                <div class="col-4 leslistes">
 
-                    {% for cat in categories %}
+                <div class="col-3 leslistes">
                         <div class="liste">
                             <ul>
-                                <li>
-                                    <a href="/souscategories/{{ cat.id }}"> {{ cat.name }} </a>
-                                </li>
+                                {% for cat in categories %}
+                                    <li>
+                                        <a href="/souscategories/{{ cat.id }}"> {{ cat.name }} </a>
+                                    </li>
+                                {% endfor %}
                             </ul>
                         </div>
-
-                    {% endfor %}
-
                 </div>
 
-                <div class="col-8">
+                <div class="col-9">
 
                     <div class="carrouselCatalogue">
                         <div class="col-md-12">
-			                <h2>Nos albums en promotion!</h2>
-			                <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
-			
-			                    {# <ol class="carousel-indicators">
-				                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                    {% for i in 1 .. x %}
-				                        <li data-target="#myCarousel" data-slide-to="{{ i }}"></li>
-				                    {% endfor %}
-			                    </ol>    #}
-                                <div class="carousel-indicators">
-                                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                    {% if x > 1 %}
-                                        {% for i in 1 .. x %}
-                                            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="{{ i }}" aria-label="Slide 2"></button>
-                                        {% endfor %}
-                                    {% endif %}
-                                </div>
-			
+			                {# <h2>Nos albums en promotion!</h2> #}
+
+                            {# DEBUT CAROUSEL #}
+
+			                <div id="myCarousel" class="carousel slide carousel-dark" data-ride="carousel" data-interval="0">
+
 			                    <div class="carousel-inner">
-                                    {% for i in 1 .. x %}
 				                    <div class="carousel-item active">
-					                    <div class="row">
-                                            {% for y in ((i * 4) - 3) .. (i * 4) %}
-						                    <div class="col-sm-3">
-							                    <div class="thumb-wrapper">
-								                    <div class="img-box">
-									                    <img src="..." class="img-fluid" alt="">
+                                        {% for key, product in products %}
+                                            {% if key == 0 %}
+						                        <div class="card">
+								                    <div class="img-wrapper">
+									                    <img src="/media/{{ product.picture }}" class="d-block w-100" alt="">
 								                    </div>
-								                    <div class="thumb-content">
-                                                        {% for key, product in products %}
-                                                        {# {% dump(key) %}
-                                                        {% dump(product) %} #}
-                                                            {% if (key + 1) == y %}
-									                            <h4>{{ product.name }}</h4>
-									                            <p class="item-price">{#<strike>$400.00</strike>#} <span>{{ product.price }}</span></p>
-									                            <div class="star-rating">
-										                            <ul class="list-inline">
-                                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
-                                                                        <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
-										                            </ul>
-									                            </div>
-									                            <a href="#" class="btn btn-primary">Add to Cart</a>
-                                                            {% endif %}
-                                                        {% endfor %}
-								                    </div>						
-							                    </div>
-						                    </div>
+								                    <div class="card-body">
+									                    <h5>{{ product.name }}</h5>
+                                                        <p class="card-text">{{ product.shortLib }}</p>
+									                    <p class="card-price"><span>{{ product.price }}</span></p>
+									                    <a href="#" class="btn btn-primary">Add to Cart</a>
+								                    </div>
+						                        </div>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                    {% for i in 1 .. (count - 1) %}
+                                        <div class="carousel-item">
+                                            {% for key, product in products %}
+                                                {% if key == i %}
+						                            <div class="card">
+								                        <div class="img-wrapper">
+									                        <img src="{{ product.picture }}" class="d-block w-100" alt="">
+								                        </div>
+								                        <div class="card-body">
+									                        <h5>{{ product.name }}</h5>
+                                                            <p class="card-text">{{ product.shortLib }}</p>
+									                        <p class="card-price"><span>{{ product.price }}</span></p>
+									                        <a href="#" class="btn btn-primary">Add to Cart</a>
+								                        </div>
+						                            </div>
+                                                {% endif %}
                                             {% endfor %}
                                         </div>
-                                    </div>
                                     {% endfor %}
                                 </div>
 
-                                {# <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
-				                    <i class="fa fa-angle-left"></i>
-			                    </a>
-			                    <a class="carousel-control-next" href="#myCarousel" data-slide="next">
-				                    <i class="fa fa-angle-right"></i>
-			                    </a> #}
                                 <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Previous</span>
@@ -108,6 +89,9 @@
                                 </button>
 
                             </div>
+
+                            {# FIN CAROUSEL #}
+
 						</div>		
                     </div>
                 </div>
