@@ -6,15 +6,17 @@
 
     {# liste = nom de la variable dans le controleur #}
 
-    {% for item in liste %}
     
     <div class="container">
         <div class="row">
+
+    {% for item in liste %}
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
             <div class="div-produit">
                 <div class="titre-produit"> {{ item.name }}
                 </div>
                 <div class="image-produit">
-                <img src="/media/{{ item.picture }}" alt="" height="300px" width="auto">
+                <img src="/media/{{ item.picture }}" alt="" class="img-fluid">
                 </div>
                 <div class="lien-produit">
                     <a href="/details/{{ item.id }}"> {{ item.name }} </a>
@@ -27,8 +29,11 @@
                 </div>
             </div>
         </div>
-    </div>
 
     {% endfor %}
+
+        </div>
+    </div>
+
 
 {% endblock %}
