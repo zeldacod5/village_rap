@@ -59,6 +59,9 @@ class Product
     #[ORM\ManyToOne(inversedBy: 'product')]
     private ?Prepared $prepared = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $artistname = null;
+
     public function __construct()
     {
     }
@@ -235,6 +238,18 @@ class Product
     public function setPrepared(?Prepared $prepared): self
     {
         $this->prepared = $prepared;
+
+        return $this;
+    }
+
+    public function getArtistname(): ?string
+    {
+        return $this->artistname;
+    }
+
+    public function setArtistname(string $artistname): self
+    {
+        $this->artistname = $artistname;
 
         return $this;
     }
