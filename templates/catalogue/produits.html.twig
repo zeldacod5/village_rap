@@ -13,7 +13,7 @@
     {% for item in liste %}
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
             <div class="div-produit">
-                <div class="titre-produit"> {{ item.name }}
+                <div class="titre-artiste"> {{ item.artistname }}
                 </div>
                 <div class="image-produit">
                 <img src="/media/{{ item.picture }}" alt="" class="img-fluid">
@@ -23,7 +23,7 @@
                 </div>
                 <div class="soustitre-produit"> {{ item.longlib }}
                 </div>
-                <div class="prix-produit"> {{ item.price }}
+                <div class="prix-produit"> {{ item.price }}€
                 </div>
                 <div class="annee-produit"> {{ item.shortlib }}
                 </div>

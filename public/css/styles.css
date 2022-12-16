@@ -277,7 +277,6 @@ footer {
 /* Réglage des div de la boucle */
 .div-produit {
     padding: 20px;
-    border: black solid 1px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 15px;
@@ -285,14 +284,49 @@ footer {
     min-height: 500px;
 }
 
-.titre-produit {
+
+/* Le nom de l'artiste */
+.titre-artiste {
     font-weight: bold;
+    text-align: center;
+    color: maroon;
 }
 
+/* Le nom des ablums */
+.lien-produit {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.lien-produit a {
+    color: maroon;
+    font-weight: bold;
+    background-color: gainsboro;
+}
+
+/* Description du produit */
+.soustitre-produit {
+    font-style: italic;
+}
+
+/* Prix du produit */
+.prix-produit {
+    font-weight: bold;
+    font-size: large;
+    margin-top: 15px;
+    text-align: start;
+}
+
+/* Année du produit */
 .annee-produit {
     font-style: italic;
     color: grey;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+
 }
+
 
 /* /!\/!\/!\ */
 /* /!\ CONFIGURATION SUR LA PAGE CATALOGUE /!\ */
@@ -367,8 +401,4 @@ footer {
 
 .form-connexion {
     padding: 5%;
-}
-
-.annee-produit {
-    color: red;
 }
