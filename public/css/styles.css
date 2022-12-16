@@ -400,5 +400,11 @@ footer {
 /* /!\/!\/!\ */
 
 .form-connexion {
-    padding: 5%;
+    padding: 10%;
 }
+
+.login-form {
+    border: solid gray 1px;
+}
+
+.b
