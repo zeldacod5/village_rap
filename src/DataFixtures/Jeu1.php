@@ -242,7 +242,7 @@ class Jeu1 extends Fixture
 
         $produit18 = new Product();
         $produit18->setName("Scarifications");
-        $produit18->setArtistname("ABD-AL-MALIK");
+        $produit18->setArtistname("ABD AL MALIK");
         $produit18->setLongLib("Album incroyable");
         $produit18->setShortLib("sortie le 6 novembre 2015");
         $produit18->setPrice(25);
