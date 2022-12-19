@@ -5,21 +5,20 @@
 {% block body %}
 <div class="container">
     <div class="row">
-        <h1></h1>
-
-        <div>
+        <div class="artist-namestyle">
+            {{ produit.artistname}}
+        </div>
+        <div class="produit-namestyle">
             {{ produit.name }}
         </div>
-        <div>
-            {{ produit.longLib }}
-        </div>
-        <div>
+        <div class="image-style">
             <img src="/media/{{ produit.picture }}" />
         </div>
-        <div class="price">
-        {{ produit.price }}
+        <div class="price-style">
+        {{ produit.price }}€
         </div>
-        <button class="button-sm"><a href="/add/{{produit.id}}">ajouter au panier</a></button>
+        <button class="button-sm"><a href="/add
+        /{{produit.id}}">ajouter au panier</a></button>
     </div>
 </div>
 

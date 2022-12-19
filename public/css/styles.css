@@ -328,6 +328,8 @@ footer {
 }
 
 
+
+
 /* /!\/!\/!\ */
 /* /!\ CONFIGURATION SUR LA PAGE CATALOGUE /!\ */
 /* /!\/!\/!\ */
@@ -407,4 +409,40 @@ footer {
     border: solid gray 1px;
 }
 
+
+
+/* /!\/!\/!\ */
+/* /!\ CONFIGURATION SUR LA PAGE DES DETAILS /!\ */
+/* /!\/!\/!\ */
+
+.artist-namestyle {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.produit-namestyle {
+    text-align: center;
+}
+
+
+
+.image-style {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.price-style {
+    text-align: center;
+    padding: 15px;
+    color: maroon;
+
+}
+
+.button-sm a {
+    color: black;
+}
 
