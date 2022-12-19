@@ -166,7 +166,7 @@ class Jeu1 extends Fixture
         $produit10->setLongLib("Album de dingue des années 2000");
         $produit10->setShortLib("sortie le 26 mai 2001..");
         $produit10->setPrice(19,99);
-        $produit10->setPicture("eminem1.jpeg");
+        $produit10->setPicture("eminemshow.jpg");
         $manager->persist($produit10);
         $produit10->setSubcategory($souscat2);
 
@@ -176,7 +176,7 @@ class Jeu1 extends Fixture
         $produit11->setLongLib("La c'est nimp..");
         $produit11->setShortLib("sortie le 13 septembre 1994");
         $produit11->setPrice(25);
-        $produit11->setPicture("notorious1.jpg");
+        $produit11->setPicture("readytodie.jpg");
         $manager->persist($produit11);
         $produit11->setSubcategory($souscat2);
 
@@ -219,6 +219,66 @@ class Jeu1 extends Fixture
         $produit15->setPicture("riyadsadio2.jpg");
         $manager->persist($produit15);
         $produit15->setSubcategory($souscat4);
+
+        $produit16 = new Product();
+        $produit16->setName("NEPTUNE TERMINUS");
+        $produit16->setArtistname("YOUSSOUPHA");
+        $produit16->setLongLib("Sixième album studio du rappeur!");
+        $produit16->setShortLib("sortie le 19 mars 2021");
+        $produit16->setPrice(25);
+        $produit16->setPicture("neptune.jpg");
+        $manager->persist($produit16);
+        $produit16->setSubcategory($souscat4);
+
+        $produit17 = new Product();
+        $produit17->setName("Qu'est ce qui fait marcher les sages?");
+        $produit17->setArtistname("LES SAGES POETES DE LA RUE");
+        $produit17->setLongLib("Zoxea / Dany Dan / Melopheelo");
+        $produit17->setShortLib("sortie le 15 février 1995");
+        $produit17->setPrice(35);
+        $produit17->setPicture("sages.jpg");
+        $manager->persist($produit17);
+        $produit17->setSubcategory($souscat1);
+
+        $produit18 = new Product();
+        $produit18->setName("Scarifications");
+        $produit18->setArtistname("ABD-AL-MALIK");
+        $produit18->setLongLib("Album incroyable");
+        $produit18->setShortLib("sortie le 6 novembre 2015");
+        $produit18->setPrice(25);
+        $produit18->setPicture("Scarifications.jpg");
+        $manager->persist($produit18);
+        $produit18->setSubcategory($souscat4);
+
+        $produit19 = new Product();
+        $produit19->setName("Gibraltar");
+        $produit19->setArtistname("ABD AL MALIK");
+        $produit19->setLongLib("Pas de lorem pour Abd");
+        $produit19->setShortLib("sortie le 12 juin 2006");
+        $produit19->setPrice(28);
+        $produit19->setPicture("Gibraltar.jpg");
+        $manager->persist($produit19);
+        $produit19->setSubcategory($souscat1);
+
+        $produit20 = new Product();
+        $produit20->setName("Effendi");
+        $produit20->setArtistname("SAMEER AHMAD");
+        $produit20->setLongLib("Faites la découverte de l'univers");
+        $produit20->setShortLib("sortie le 10 décembre 2021");
+        $produit20->setPrice(31);
+        $produit20->setPicture("effendi.jpg");
+        $manager->persist($produit20);
+        $produit20->setSubcategory($souscat4);
+
+        $produit21 = new Product();
+        $produit21->setName("Château Rouge");
+        $produit21->setArtistname("ABD AL MALIK");
+        $produit21->setLongLib("Pas de lorem pour Abd");
+        $produit21->setShortLib("sortie le 8 novembre 2010");
+        $produit21->setPrice(28);
+        $produit21->setPicture("chateaurouge.jpg");
+        $manager->persist($produit21);
+        $produit21->setSubcategory($souscat1);
 
         $manager->flush();
     }
