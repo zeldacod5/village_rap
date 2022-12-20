@@ -203,7 +203,7 @@ class Jeu1 extends Fixture
         $produit14 = new Product();
         $produit14->setName("Nostalgia+");
         $produit14->setArtistname("GREEN MONTANA");
-        $produit14->setLongLib("Dernier album de GREEN MONTAIN dans les backs !");
+        $produit14->setLongLib("Dernier album de Green Montain dans les backs !");
         $produit14->setShortLib("sortie le 15 avril 2022..");
         $produit14->setPrice(22);
         $produit14->setPicture("greenmontana.jpg");
