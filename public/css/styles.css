@@ -418,10 +418,14 @@ footer {
 .artist-namestyle {
     text-align: center;
     margin-top: 15px;
+    font-weight: bold;
+    color: maroon;
 }
 
 .produit-namestyle {
     text-align: center;
+    font-weight: bold;
+    margin-bottom: 8px;
 }
 
 
@@ -442,7 +446,33 @@ footer {
 
 }
 
+.button-style {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
 .button-sm a {
     color: black;
 }
+
+/* /!\/!\/!\ */
+/* /!\ CONFIGURATION SUR LA PAGE DES PANIERS /!\ */
+/* /!\/!\/!\ */
+
+.panier-style {
+    text-align: center;
+    padding: 15px;
+}
+
+.artiste-panier {
+    color: red;
+}
+
+.price-prod-panier {
+    padding: 3px;
+    margin-left: 7px;
+    color: black;
+    font-weight: bold;
+}
+
 

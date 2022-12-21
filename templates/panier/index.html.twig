@@ -6,22 +6,29 @@
 
 <div class="container">
     <div class="row">
-        <h1>panier</h1>
+        <div class="panier-style">
+            <h1>Votre panier</h1>
+        </div>
 
         {% for pro in panier %}
-
-            <div>
-                {{ pro.longlib }}
+            <div class="artiste-panier">
+                {{ pro.artistname }}
             </div>
-            <div>
+            <div class="album-panier">
+                {{ pro.name }}
+            </div>
+            <div class="price-prod-panier">
                 {{ pro.price }}
             </div>
+            <br>
             
         {% endfor %}
-
-        <hr>
-
+        <br>
+        <a href="/valid" class="btn btn-success">Valider la commande</a>
+        <br>
         <a href="/clear" class="btn btn-danger">Vider la panier</a>
+        <br>
+
 
     </div>
 </div>
