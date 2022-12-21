@@ -36,26 +36,101 @@ class Jeu1 extends Fixture
 
 
         $cat1 = new Category();
-        $cat1->setName("RAP Français");
-        $cat1->setPicture("rapfr.jpg");
+        $cat1->setName("Drill");
+        $cat1->setPicture("drill.jpg");
         $manager->persist($cat1);
 
         $cat2 = new Category();
-        $cat2->setName("RAP Américain");
-        $cat2->setPicture("rapus.jpeg");
+        $cat2->setName("Trap");
+        $cat2->setPicture("trap.jpeg");
         $manager->persist($cat2);
+
+        $cat3 = new Category();
+        $cat3->setName("Jersey");
+        $cat3->setPicture("jersey.jpg");
+        $manager->persist($cat3);
+
+        $cat4 = new Category();
+        $cat4->setName("BoomBap");
+        $cat4->setPicture("boombap.jpg");
+        $manager->persist($cat4);
+
+        $cat5 = new Category();
+        $cat5->setName("Plug");
+        $cat5->setPicture("plug.jpg");
+        $manager->persist($cat5);
+
+        $cat6 = new Category();
+        $cat6->setName("Cloud Rap");
+        $cat6->setPicture("cloudrap.jpg");
+        $manager->persist($cat6);
+
+        $cat7 = new Category();
+        $cat7->setName("Conscient");
+        $cat7->setPicture("conscient.jpg");
+        $manager->persist($cat7);
+
+        $cat8 = new Category();
+        $cat8->setName("Emo Rap");
+        $cat8->setPicture("emorap.jpg");
+        $manager->persist($cat8);
+
+        $cat9 = new Category();
+        $cat9->setName("Frat");
+        $cat9->setPicture("Frat.jpg");
+        $manager->persist($cat9);
+
+        $cat10 = new Category();
+        $cat10->setName("Gangsta Rap");
+        $cat10->setPicture("gangstarap.jpg");
+        $manager->persist($cat10);
+
+        $cat11 = new Category();
+        $cat11->setName("Jazz Rap");
+        $cat11->setPicture("jazzrap.jpg");
+        $manager->persist($cat11);
+
+        $cat12 = new Category();
+        $cat12->setName("US Rap");
+        $cat12->setPicture("usrap.jpg");
+        $manager->persist($cat12);
+
+        $cat13 = new Category();
+        $cat13->setName("UK Rap");
+        $cat13->setPicture("ukrap.jpg");
+        $manager->persist($cat13);
+
+        $cat14 = new Category();
+        $cat14->setName("FR Rap");
+        $cat14->setPicture("frrap.jpg");
+        $manager->persist($cat14);
 
 
 
         $souscat1 = new Subcategory();
-        $souscat1->setName("Old School");
+        $souscat1->setName("Certified Diamond");
         $manager->persist($souscat1);
         $souscat1->setCategory($cat1);
 
         $souscat2 = new Subcategory();
-        $souscat2->setName("Old School");
+        $souscat2->setName("Certified Gold");
         $manager->persist($souscat2);
-        $souscat2->setCategory($cat2);
+        $souscat2->setCategory($cat1);
+
+        $souscat3 = new Subcategory();
+        $souscat3->setName("New Generation");
+        $manager->persist($souscat3);
+        $souscat3->setCategory($cat1);
+
+        $souscat4 = new Subcategory();
+        $souscat4->setName("Old School");
+        $manager->persist($souscat4);
+        $souscat4->setCategory($cat1);
+
+        $souscat5 = new Subcategory();
+        $souscat5->setName("LowKey & Underground");
+        $manager->persist($souscat5);
+        $souscat5->setCategory($cat1);
 
 
 
