@@ -62,8 +62,16 @@ class Product
     #[ORM\Column(length: 255)]
     private ?string $artistname = null;
 
+    #[ORM\ManyToMany(targetEntity: Label::class, mappedBy: 'Product')]
+    private Collection $labels;
+
+    #[ORM\ManyToMany(targetEntity: Artist::class, mappedBy: 'Products')]
+    private Collection $artists;
+
     public function __construct()
     {
+        $this->labels = new ArrayCollection();
+        $this->artists = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -250,6 +258,60 @@ class Product
     public function setArtistname(string $artistname): self
     {
         $this->artistname = $artistname;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Label>
+     */
+    public function getLabels(): Collection
+    {
+        return $this->labels;
+    }
+
+    public function addLabel(Label $label): self
+    {
+        if (!$this->labels->contains($label)) {
+            $this->labels->add($label);
+            $label->addProduct($this);
+        }
+
+        return $this;
+    }
+
+    public function removeLabel(Label $label): self
+    {
+        if ($this->labels->removeElement($label)) {
+            $label->removeProduct($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Artist>
+     */
+    public function getArtists(): Collection
+    {
+        return $this->artists;
+    }
+
+    public function addArtist(Artist $artist): self
+    {
+        if (!$this->artists->contains($artist)) {
+            $this->artists->add($artist);
+            $artist->addProduct($this);
+        }
+
+        return $this;
+    }
+
+    public function removeArtist(Artist $artist): self
+    {
+        if ($this->artists->removeElement($artist)) {
+            $artist->removeProduct($this);
+        }
 
         return $this;
     }

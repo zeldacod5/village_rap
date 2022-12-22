@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\LabelRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -22,6 +24,14 @@ class Label
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $description = null;
+
+    #[ORM\ManyToMany(targetEntity: Product::class, inversedBy: 'labels')]
+    private Collection $Product;
+
+    public function __construct()
+    {
+        $this->Product = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -60,6 +70,30 @@ class Label
     public function setDescription(?string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Product>
+     */
+    public function getProduct(): Collection
+    {
+        return $this->Product;
+    }
+
+    public function addProduct(Product $product): self
+    {
+        if (!$this->Product->contains($product)) {
+            $this->Product->add($product);
+        }
+
+        return $this;
+    }
+
+    public function removeProduct(Product $product): self
+    {
+        $this->Product->removeElement($product);
 
         return $this;
     }
