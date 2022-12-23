@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\ArtistRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -25,6 +27,14 @@ class Artist
 
     #[ORM\Column(nullable: true)]
     private ?int $sales = null;
+
+    #[ORM\ManyToMany(targetEntity: Product::class, inversedBy: 'artists')]
+    private Collection $Products;
+
+    public function __construct()
+    {
+        $this->Products = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -75,6 +85,30 @@ class Artist
     public function setSales(?int $sales): self
     {
         $this->sales = $sales;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Product>
+     */
+    public function getProducts(): Collection
+    {
+        return $this->Products;
+    }
+
+    public function addProduct(Product $product): self
+    {
+        if (!$this->Products->contains($product)) {
+            $this->Products->add($product);
+        }
+
+        return $this;
+    }
+
+    public function removeProduct(Product $product): self
+    {
+        $this->Products->removeElement($product);
 
         return $this;
     }

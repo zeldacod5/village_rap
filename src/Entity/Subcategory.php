@@ -28,8 +28,8 @@ class Subcategory
     #[ORM\ManyToOne(inversedBy: 'subcategories')]
     private ?Category $category = null;
 
-    #[ORM\OneToMany(targetEntity: Product::class, mappedBy: 'subcategory')]
-    private Collection $products;
+    // #[ORM\OneToMany(targetEntity: Product::class, mappedBy: 'subcategory')]
+    // private Collection $products;
 
     public function __construct()
     {
@@ -89,30 +89,30 @@ class Subcategory
         return $this;
     }
 
-    /**
-     * @return Collection<int, Product>
-     */
-    public function getProducts(): Collection
-    {
-        return $this->products;
-    }
+    // /**
+    //  * @return Collection<int, Product>
+    //  */
+    // public function getProducts(): Collection
+    // {
+    //     return $this->products;
+    // }
 
-    public function addProduct(Product $product): self
-    {
-        if (!$this->products->contains($product)) {
-            $this->products->add($product);
-            $product->addSubcategory($this);
-        }
+    // public function addProduct(Product $product): self
+    // {
+    //     if (!$this->products->contains($product)) {
+    //         $this->products->add($product);
+    //         $product->addSubcategory($this);
+    //     }
 
-        return $this;
-    }
+    //     return $this;
+    // }
 
-    public function removeProduct(Product $product): self
-    {
-        if ($this->products->removeElement($product)) {
-            $product->removeSubcategory($this);
-        }
+    // public function removeProduct(Product $product): self
+    // {
+    //     if ($this->products->removeElement($product)) {
+    //         $product->removeSubcategory($this);
+    //     }
 
-        return $this;
-    }
+    //     return $this;
+    // }
 }
