@@ -475,4 +475,9 @@ footer {
     font-weight: bold;
 }
 
+.lesboutons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
 
