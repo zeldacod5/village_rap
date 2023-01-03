@@ -4,5 +4,17 @@
 
 {% block body %}
 
+<div class="container">
+    <div class="row">
+        <div class="cardacceuil">
+
+                {% for cat in categories %}
+                <div class="divcat">
+                <a href="/souscategories/{{ cat.id }}" class="acategories"> {{ cat.name }} </a>
+                </div>
+{% endfor %}
+        </div>
+    </div>
+</div>
 
 {% endblock %}

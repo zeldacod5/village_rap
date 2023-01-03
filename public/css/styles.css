@@ -96,11 +96,17 @@ body {
 /* /!\ CONFIGURATION SUR LA PAGE ACCEUIL /!\ */
 /* /!\/!\/!\ */
 
-.banniere {
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    width: 62%;
+.cardacceuil {
+    display: inline;
+    padding: 25px;
+    text-align: center;
+
+}
+
+.acategories {
+    color: maroon;
+    display: inline;
+    text-align: center;
 }
 
 
