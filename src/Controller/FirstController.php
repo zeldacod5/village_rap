@@ -12,7 +12,6 @@ class FirstController extends AbstractController
     #[Route('/', name: 'acceuil')]
     public function acceuil(CategoryRepository $repo): Response
     {
-
         return $this->render('first/acceuil.html.twig', [
             'categories' => $repo->findAll()
         ]);

@@ -96,19 +96,25 @@ body {
 /* /!\ CONFIGURATION SUR LA PAGE ACCEUIL /!\ */
 /* /!\/!\/!\ */
 
-.cardacceuil {
-    display: inline;
-    padding: 25px;
-    text-align: center;
 
+.cardacceuil {
+    display: flex;
+    justify-content: center;
 }
 
 .acategories {
     color: maroon;
-    display: inline;
-    text-align: center;
 }
 
+.divcat {
+    padding: 80px;
+
+}
+
+.imageacceuil {
+    width: 285px;
+    height: 285px;
+} 
 
 
 /* /!\/!\/!\ */
@@ -288,6 +294,10 @@ footer {
     margin-top: 15px;
     margin-bottom: 15px;
     min-height: 500px;
+}
+
+.div-produit a {
+    text-decoration: none;
 }
 
 

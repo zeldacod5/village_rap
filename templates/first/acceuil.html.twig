@@ -10,7 +10,9 @@
 
                 {% for cat in categories %}
                 <div class="divcat">
-                <a href="/souscategories/{{ cat.id }}" class="acategories"> {{ cat.name }} </a>
+                <a href="/souscategories/{{ cat.id }}" class="acategories">
+                <img src="/media/{{ cat.picture }}" class="imageacceuil"></a>
+                
                 </div>
 {% endfor %}
         </div>

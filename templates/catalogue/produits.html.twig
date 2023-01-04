@@ -13,13 +13,14 @@
     {% for item in liste %}
         <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
             <div class="div-produit">
+            <a href="/details/{{ item.id }}"> 
                 <div class="titre-artiste"> {{ item.artistname }}
                 </div>
                 <div class="image-produit">
                 <img src="/media/{{ item.picture }}" alt="" class="img-fluid">
                 </div>
                 <div class="lien-produit">
-                    <a href="/details/{{ item.id }}"> {{ item.name }} </a>
+                    {{ item.name }} </a>
                 </div>
                 <div class="soustitre-produit"> {{ item.longlib }}
                 </div>
