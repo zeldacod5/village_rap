@@ -2,18 +2,21 @@
 
 namespace App\Controller;
 
+use App\Repository\ProductRepository;
 use App\Repository\CategoryRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class FirstController extends AbstractController
 {
     #[Route('/', name: 'acceuil')]
-    public function acceuil(CategoryRepository $repo): Response
+    public function acceuil(CategoryRepository $repo, ProductRepository $repo_product): Response
     {
+
         return $this->render('first/acceuil.html.twig', [
-            'categories' => $repo->findAll()
+            'categories' => $repo->findAll(),
+            'enavant' => $repo_product->findBy([ 'deals' => true])
         ]);
     }
 

@@ -6,11 +6,8 @@ use App\Entity\User;
 use App\Entity\Product;
 use App\Entity\Category;
 use App\Entity\Subcategory;
-use App\Entity\Label;
-use App\Entity\Artist;
 use Doctrine\Persistence\ObjectManager;
 use Doctrine\Bundle\FixturesBundle\Fixture;
-use Doctrine\Common\Collections\Collection;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 
 class Jeu1 extends Fixture
@@ -38,137 +35,39 @@ class Jeu1 extends Fixture
         $manager->persist($u2);
 
 
-
-        $lab1 = new Label();
-        $lab1->setName("Drill");
-        $lab1->setPicture("drill.jpg");
-        $lab1->setDescription("");
-        $manager->persist($lab1);
-        
-
-        $lab2 = new Label();
-        $lab2->setName("Trap");
-        $lab2->setPicture("trap.jpeg");
-        $lab2->setDescription("");
-        $manager->persist($lab2);
-
-        $lab3 = new Label();
-        $lab3->setName("Jersey");
-        $lab3->setPicture("jersey.jpg");
-        $lab3->setDescription("");
-        $manager->persist($lab3);
-
-        $lab4 = new Label();
-        $lab4->setName("BoomBap");
-        $lab4->setPicture("boombap.jpg");
-        $lab4->setDescription("");
-        $manager->persist($lab4);
-
-        $lab5 = new Label();
-        $lab5->setName("Plug");
-        $lab5->setPicture("plug.jpg");
-        $lab5->setDescription("");
-        $manager->persist($lab5);
-
-        $lab6 = new Label();
-        $lab6->setName("Cloud Rap");
-        $lab6->setPicture("cloudrap.jpg");
-        $lab6->setDescription("");
-        $manager->persist($lab6);
-
-        $lab7 = new Label();
-        $lab7->setName("Conscient");
-        $lab7->setPicture("conscient.jpg");
-        $lab7->setDescription("");
-        $manager->persist($lab7);
-
-        $lab8 = new Label();
-        $lab8->setName("Emo Rap");
-        $lab8->setPicture("emorap.jpg");
-        $lab8->setDescription("");
-        $manager->persist($lab8);
-
-        $lab9 = new Label();
-        $lab9->setName("Frat");
-        $lab9->setPicture("Frat.jpg");
-        $lab9->setDescription("");
-        $manager->persist($lab9);
-
-        $lab10 = new Label();
-        $lab10->setName("Gangsta Rap");
-        $lab10->setPicture("gangstarap.jpg");
-        $lab10->setDescription("");
-        $manager->persist($lab10);
-
-        $lab11 = new Label();
-        $lab11->setName("Jazz Rap");
-        $lab11->setPicture("jazzrap.jpg");
-        $lab11->setDescription("");
-        $manager->persist($lab11);
-
-        $lab12 = new Label();
-        $lab12->setName("US Rap");
-        $lab12->setPicture("usrap.jpg");
-        $lab12->setDescription("");
-        $manager->persist($lab12);
-
-        $lab13 = new Label();
-        $lab13->setName("UK Rap");
-        $lab13->setPicture("ukrap.jpg");
-        $lab13->setDescription("");
-        $manager->persist($lab13);
-
-        $lab14 = new Label();
-        $lab14->setName("FR Rap");
-        $lab14->setPicture("frrap.jpg");
-        $lab14->setDescription("");
-        $manager->persist($lab14);
-
-        $lab15 = new Label();
-        $lab15->setName("Certified Diamond");
-        $lab15->setPicture("diamond.jpg");
-        $lab15->setDescription("");
-        $manager->persist($lab15);
-
-        $lab16 = new Label();
-        $lab16->setName("Certified Gold");
-        $lab16->setPicture("gold.jpg");
-        $lab16->setDescription("");
-        $manager->persist($lab16);
-
-        $lab17 = new Label();
-        $lab17->setName("New Generation");
-        $lab17->setPicture("nawgen.jpg");
-        $lab17->setDescription("");
-        $manager->persist($lab17);
-
-        $lab18 = new Label();
-        $lab18->setName("Old School");
-        $lab18->setPicture("oldschool.jpg");
-        $lab18->setDescription("");
-        $manager->persist($lab18);
-
-        $lab19 = new Label();
-        $lab19->setName("LowKey & Underground");
-        $lab19->setPicture("lowkey.jpg");
-        $lab19->setDescription("");
-        $manager->persist($lab19);
-
-
-
         $cat1 = new Category();
-        $cat1->setName("CAT N°1");
-        $cat1->setPicture("...");
-        $cat1->setDescription("...");
+        $cat1->setName("RAP Français");
+        $cat1->setPicture("rapfr.jpg");
         $manager->persist($cat1);
 
+        $cat2 = new Category();
+        $cat2->setName("RAP Américain");
+        $cat2->setPicture("rapus.jpeg");
+        $manager->persist($cat2);
+
+
+
         $souscat1 = new Subcategory();
-        $souscat1->setName("SOUSCAT N°1");
-        $souscat1->setPicture("...");
-        $souscat1->setDescription("...");
+        $souscat1->setName("Old School");
         $manager->persist($souscat1);
         $souscat1->setCategory($cat1);
 
+        $souscat2 = new Subcategory();
+        $souscat2->setName("Old School");
+        $manager->persist($souscat2);
+        $souscat2->setCategory($cat2);
+
+
+
+        $souscat4 = new Subcategory();
+        $souscat4->setName("New School");
+        $manager->persist($souscat4);
+        $souscat4->setCategory($cat1);
+
+        $souscat5 = new Subcategory();
+        $souscat5->setName("New School");
+        $manager->persist($souscat5);
+        $souscat5->setCategory($cat2);
 
 
         $produit1 = new Product();
@@ -180,6 +79,7 @@ class Jeu1 extends Fixture
         $produit1->setPicture("solaarmc.jpg");
         $manager->persist($produit1);
         $produit1->setSubcategory($souscat1);
+        $produit1->setDeals(0);
 
         $produit2 = new Product();
         $produit2->setName("Memoria");
@@ -189,7 +89,8 @@ class Jeu1 extends Fixture
         $produit2->setPrice(19,99);
         $produit2->setPicture("memoria.jpg");
         $manager->persist($produit2);
-        $produit2->setSubcategory($souscat1);
+        $produit2->setSubcategory($souscat4);
+        $produit2->setDeals(0);
 
         $produit3 = new Product();
         $produit3->setName("L'étrange Histoire de Mr.Anderson");
@@ -199,7 +100,8 @@ class Jeu1 extends Fixture
         $produit3->setPrice(19,99);
         $produit3->setPicture("laylow3.jpg");
         $manager->persist($produit3);
-        $produit3->setSubcategory($souscat1);
+        $produit3->setSubcategory($souscat4);
+        $produit3->setDeals(0);
 
         $produit4 = new Product();
         $produit4->setName("Apaches");
@@ -209,7 +111,8 @@ class Jeu1 extends Fixture
         $produit4->setPrice(22);
         $produit4->setPicture("ahmad.jpg");
         $manager->persist($produit4);
-        $produit4->setSubcategory($souscat1);
+        $produit4->setSubcategory($souscat4);
+        $produit4->setDeals(0);
 
         $produit5 = new Product();
         $produit5->setName("Opéra Puccino");
@@ -220,6 +123,7 @@ class Jeu1 extends Fixture
         $produit5->setPicture("operapuccino.jpg");
         $manager->persist($produit5);
         $produit5->setSubcategory($souscat1);
+        $produit5->setDeals(0);
 
         $produit6 = new Product();
         $produit6->setName("Le combat continue");
@@ -230,6 +134,7 @@ class Jeu1 extends Fixture
         $produit6->setPicture("idealj.jpg");
         $manager->persist($produit6);
         $produit6->setSubcategory($souscat1);
+        $produit6->setDeals(0);
 
         $produit7 = new Product();
         $produit7->setName("L'école du micro d'argent");
@@ -240,6 +145,7 @@ class Jeu1 extends Fixture
         $produit7->setPicture("iam1.jpg");
         $manager->persist($produit7);
         $produit7->setSubcategory($souscat1);
+        $produit7->setDeals(0);
 
         $produit8 = new Product();
         $produit8->setName("Mauvais oeil");
@@ -250,6 +156,7 @@ class Jeu1 extends Fixture
         $produit8->setPicture("lunatic.jpg");
         $manager->persist($produit8);
         $produit8->setSubcategory($souscat1);
+        $produit8->setDeals(0);
 
         $produit9 = new Product();
         $produit9->setName("The Massacre");
@@ -259,7 +166,8 @@ class Jeu1 extends Fixture
         $produit9->setPrice(19,99);
         $produit9->setPicture("50cent2.jpg");
         $manager->persist($produit9);
-        $produit9->setSubcategory($souscat1);
+        $produit9->setSubcategory($souscat2);
+        $produit9->setDeals(0);
 
         $produit10 = new Product();
         $produit10->setName("The Eminem Show");
@@ -269,7 +177,8 @@ class Jeu1 extends Fixture
         $produit10->setPrice(19,99);
         $produit10->setPicture("eminemshow.jpg");
         $manager->persist($produit10);
-        $produit10->setSubcategory($souscat1);
+        $produit10->setSubcategory($souscat2);
+        $produit10->setDeals(0);
 
         $produit11 = new Product();
         $produit11->setName("Ready to Die");
@@ -279,7 +188,8 @@ class Jeu1 extends Fixture
         $produit11->setPrice(25);
         $produit11->setPicture("readytodie.jpg");
         $manager->persist($produit11);
-        $produit11->setSubcategory($souscat1);
+        $produit11->setSubcategory($souscat2);
+        $produit11->setDeals(0);
 
         $produit12 = new Product();
         $produit12->setName("Good Kid, M.A.A.D. City");
@@ -289,7 +199,8 @@ class Jeu1 extends Fixture
         $produit12->setPrice(19,99);
         $produit12->setPicture("kendrick1.jpg");
         $manager->persist($produit12);
-        $produit12->setSubcategory($souscat1);
+        $produit12->setSubcategory($souscat5);
+        $produit12->setDeals(0);
 
         $produit13 = new Product();
         $produit13->setName("Damn");
@@ -299,17 +210,19 @@ class Jeu1 extends Fixture
         $produit13->setPrice(26);
         $produit13->setPicture("kendrick2.jpg");
         $manager->persist($produit13);
-        $produit13->setSubcategory($souscat1);
+        $produit13->setSubcategory($souscat5);
+        $produit13->setDeals(0);
 
         $produit14 = new Product();
         $produit14->setName("Nostalgia+");
         $produit14->setArtistname("GREEN MONTANA");
-        $produit14->setLongLib("Dernier album de Green Montain dans les backs !");
+        $produit14->setLongLib("Dernier album de GREEN MONTAIN dans les backs !");
         $produit14->setShortLib("sortie le 15 avril 2022..");
         $produit14->setPrice(22);
         $produit14->setPicture("greenmontana.jpg");
         $manager->persist($produit14);
-        $produit14->setSubcategory($souscat1);
+        $produit14->setSubcategory($souscat4);
+        $produit14->setDeals(0);
 
         $produit15 = new Product();
         $produit15->setName("RIYAD SADIO");
@@ -319,7 +232,8 @@ class Jeu1 extends Fixture
         $produit15->setPrice(35);
         $produit15->setPicture("riyadsadio2.jpg");
         $manager->persist($produit15);
-        $produit15->setSubcategory($souscat1);
+        $produit15->setSubcategory($souscat4);
+        $produit15->setDeals(0);
 
         $produit16 = new Product();
         $produit16->setName("NEPTUNE TERMINUS");
@@ -329,7 +243,8 @@ class Jeu1 extends Fixture
         $produit16->setPrice(25);
         $produit16->setPicture("neptune.jpg");
         $manager->persist($produit16);
-        $produit16->setSubcategory($souscat1);
+        $produit16->setSubcategory($souscat4);
+        $produit16->setDeals(0);
 
         $produit17 = new Product();
         $produit17->setName("Qu'est ce qui fait marcher les sages?");
@@ -340,6 +255,7 @@ class Jeu1 extends Fixture
         $produit17->setPicture("sages.jpg");
         $manager->persist($produit17);
         $produit17->setSubcategory($souscat1);
+        $produit17->setDeals(0);
 
         $produit18 = new Product();
         $produit18->setName("Scarifications");
@@ -349,7 +265,8 @@ class Jeu1 extends Fixture
         $produit18->setPrice(25);
         $produit18->setPicture("Scarifications.jpg");
         $manager->persist($produit18);
-        $produit18->setSubcategory($souscat1);
+        $produit18->setSubcategory($souscat4);
+        $produit18->setDeals(0);
 
         $produit19 = new Product();
         $produit19->setName("Gibraltar");
@@ -360,6 +277,7 @@ class Jeu1 extends Fixture
         $produit19->setPicture("Gibraltar.jpg");
         $manager->persist($produit19);
         $produit19->setSubcategory($souscat1);
+        $produit19->setDeals(0);
 
         $produit20 = new Product();
         $produit20->setName("Effendi");
@@ -369,7 +287,8 @@ class Jeu1 extends Fixture
         $produit20->setPrice(31);
         $produit20->setPicture("effendi.jpg");
         $manager->persist($produit20);
-        $produit20->setSubcategory($souscat1);
+        $produit20->setSubcategory($souscat4);
+        $produit20->setDeals(0);
 
         $produit21 = new Product();
         $produit21->setName("Château Rouge");
@@ -380,6 +299,7 @@ class Jeu1 extends Fixture
         $produit21->setPicture("chateaurouge.jpg");
         $manager->persist($produit21);
         $produit21->setSubcategory($souscat1);
+        $produit21->setDeals(0);
 
         $manager->flush();
     }

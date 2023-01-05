@@ -1,4 +1,14 @@
 /* /!\/!\/!\ */
+/* /!\ AU DESSUS DE LA NAVBAR /!\ */
+/* /!\/!\/!\ */
+
+.barrehaute {
+    background-color: #9E9E9E;
+    color: #9E9E9E;
+    text-align: center;
+}
+
+/* /!\/!\/!\ */
 /* /!\ CONFIGURATION SUR LA NAVBAR /!\ */
 /* /!\/!\/!\ */
 
@@ -34,9 +44,8 @@
 .barre {
     background-color: #EEEEEE;
 /*    background-color:  	#DCDCDC; */
-
     display: flex;
-    border: 1px solid black;
+    border: 1px solid lemonchiffon;
     padding:12px;
 }
 

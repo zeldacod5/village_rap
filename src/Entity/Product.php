@@ -68,6 +68,9 @@ class Product
     #[ORM\ManyToMany(targetEntity: Artist::class, mappedBy: 'Products')]
     private Collection $artists;
 
+    #[ORM\Column]
+    private ?bool $deals = false;
+
     public function __construct()
     {
         $this->labels = new ArrayCollection();
@@ -312,6 +315,18 @@ class Product
         if ($this->artists->removeElement($artist)) {
             $artist->removeProduct($this);
         }
+
+        return $this;
+    }
+
+    public function isDeals(): ?bool
+    {
+        return $this->deals;
+    }
+
+    public function setDeals(bool $deals): self
+    {
+        $this->deals = $deals;
 
         return $this;
     }

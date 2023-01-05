@@ -13,7 +13,11 @@
     </head>
 
     <body>
-        <div class="container">
+        <div class="barrehaute">
+        SITE VILLAGE_RAP
+        </div>
+            <div class="container">
+            
                 <nav class="navbar navbar-expand-md navbar-light bg-light">
                         <div class="container-fluid">
                             <a class="navbar-brand" href="{{ path('acceuil') }}"><img class="logo" src="/media/logo5.png" width="150px"></a>
@@ -27,10 +31,10 @@
                                         <span class="visually-hidden">(current)</span></a>
                                         </li>
                                         <li class="nav-item ps-2 ps-md-4" >
-                                        <a class="nav-link navbar1" href="{{ path('catalogue') }}"><i class="fa-solid fa-compact-disc"></i>   BOUTIQUE</a>
+                                        <a class="nav-link navbar1" href="{{ path('acceuil') }}"><i class="fa-solid fa-compact-disc"></i>   BOUTIQUE</a>
                                         </li>
                                         <li class="nav-item ps-2 ps-md-4" >
-                                        <a class="nav-link navbar1" href="{{ path('catalogue') }}"><i class="fa-solid fa-gem"></i>  PROMO</a>
+                                        <a class="nav-link navbar1" href="{{ path('acceuil') }}"><i class="fa-solid fa-gem"></i>  PROMO</a>
                                         </li>
                                 </ul>
                                         <a class="nav-link navbar2" href="#"><i class="fa-solid fa-user-plus"></i>   INSCRIPTION</a>
@@ -119,7 +123,7 @@
                     <p><i class="fa-solid fa-copyright"></i>  Copyright - Projet crée en <a href="#" class="symfony">Symfony</a> par  <a href="https://github.com/zeldacod5"></i> Loucas Hérault</a> et <a href="https://github.com/kiirbs"></i> Maxence Lallement</a>.</p>
                 </div>
                 <div class="date">
-                    <p>Dernière mise à jour du site le : </p>
+                    <p>Dernière mise à jour du site le :  {{ "now"|date('d/m/Y') }} </p>
                 </div>
             </footer>
 
