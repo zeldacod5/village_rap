@@ -18,18 +18,22 @@
                 {{ pro.name }}
             </div>
             <div class="price-prod-panier">
-                {{ pro.price }}
+                {{ pro.price }}€
+            </div>
+            <div class="mini-image-panier">
+                <img src="/media/{{ pro.picture }}" class="miniimageprod">
             </div>
             <br>
             
         {% endfor %}
         <div class="lesboutons">
-        <a href="{{ path('acceuil') }}" class="btn btn-warning">Retour sur la boutique</button>
+        <a href="{{ path('acceuil') }}" class="btn btn-warning" id="boutonretour">Retour sur la boutique</button>
         <br>
-        <a href="/valid" class="btn btn-success">Valider la commande</a>
+        <a href="/valid" class="btn btn-success" id="boutonvalidation">Valider la commande</a>
         <br>
-        <a href="/clear" class="btn btn-danger">Vider la panier</a>
+        <a href="/clear" class="btn btn-danger" id="boutonviderpanier">Vider la panier</a>
         <br>
+        
         </div>
 
 

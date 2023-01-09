@@ -90,7 +90,7 @@ class Jeu1 extends Fixture
         $produit2->setPicture("memoria.jpg");
         $manager->persist($produit2);
         $produit2->setSubcategory($souscat4);
-        $produit2->setDeals(0);
+        $produit2->setDeals(1);
 
         $produit3 = new Product();
         $produit3->setName("L'étrange Histoire de Mr.Anderson");
@@ -123,7 +123,7 @@ class Jeu1 extends Fixture
         $produit5->setPicture("operapuccino.jpg");
         $manager->persist($produit5);
         $produit5->setSubcategory($souscat1);
-        $produit5->setDeals(0);
+        $produit5->setDeals(1);
 
         $produit6 = new Product();
         $produit6->setName("Le combat continue");
@@ -145,7 +145,7 @@ class Jeu1 extends Fixture
         $produit7->setPicture("iam1.jpg");
         $manager->persist($produit7);
         $produit7->setSubcategory($souscat1);
-        $produit7->setDeals(0);
+        $produit7->setDeals(1);
 
         $produit8 = new Product();
         $produit8->setName("Mauvais oeil");
@@ -156,7 +156,7 @@ class Jeu1 extends Fixture
         $produit8->setPicture("lunatic.jpg");
         $manager->persist($produit8);
         $produit8->setSubcategory($souscat1);
-        $produit8->setDeals(0);
+        $produit8->setDeals(1);
 
         $produit9 = new Product();
         $produit9->setName("The Massacre");
@@ -222,7 +222,7 @@ class Jeu1 extends Fixture
         $produit14->setPicture("greenmontana.jpg");
         $manager->persist($produit14);
         $produit14->setSubcategory($souscat4);
-        $produit14->setDeals(0);
+        $produit14->setDeals(1);
 
         $produit15 = new Product();
         $produit15->setName("RIYAD SADIO");
@@ -244,7 +244,7 @@ class Jeu1 extends Fixture
         $produit16->setPicture("neptune.jpg");
         $manager->persist($produit16);
         $produit16->setSubcategory($souscat4);
-        $produit16->setDeals(0);
+        $produit16->setDeals(1);
 
         $produit17 = new Product();
         $produit17->setName("Qu'est ce qui fait marcher les sages?");
@@ -266,7 +266,7 @@ class Jeu1 extends Fixture
         $produit18->setPicture("Scarifications.jpg");
         $manager->persist($produit18);
         $produit18->setSubcategory($souscat4);
-        $produit18->setDeals(0);
+        $produit18->setDeals(1);
 
         $produit19 = new Product();
         $produit19->setName("Gibraltar");

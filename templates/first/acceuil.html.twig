@@ -6,22 +6,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="produitappel">
-        {% for prod in enavant %}
-            <div class="produitacceuil">
-                <a href="/produits/{{ prod.id }}" class="aproduits">
-                    <div class="artistprodacceuil"> {{ prod.artistname }}
-                    </div>
-                        <div class="albumacceuil"> {{ prod.name }}
-                        </div>
-                        <img src="/media/{{ prod.picture }}" class="imagealbumpprod">
-                </a>
-            </div>
-            {% endfor %}
-        </div>
-
-        <div class="cardacceuil">
-
+            <div class="cardacceuil">
                 {% for cat in categories %}
                 <div class="divcat">
                 <a href="/souscategories/{{ cat.id }}" class="acategories">
@@ -30,8 +15,24 @@
                 </div>
 {% endfor %}
 
+
         </div>
-    </div>
+            </div>
 </div>
+        <div class="produitappel">
+        {% for prod in enavant %}
+            <div class="produitacceuil">
+                <a href="/details/{{ prod.id }}" class="aproduits">
+                    <div class="artistprodacceuil"> {{ prod.artistname }}
+                    </div>
+                        <div class="albumacceuil"> {{ prod.name }}
+                        </div>
+                        <img src="/media/{{ prod.picture }}" class="imagealbumprod">
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+
+
 
 {% endblock %}

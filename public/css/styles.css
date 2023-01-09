@@ -106,6 +106,7 @@ body {
 /* /!\/!\/!\ */
 
 
+
 .cardacceuil {
     display: flex;
     justify-content: center;
@@ -124,6 +125,42 @@ body {
     width: 285px;
     height: 285px;
 } 
+
+.h2 {
+    color: maroon;
+}
+
+/* /!\/!\/!\ *//* /!\/!\/!\ */
+
+.produitappel {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.produitacceuil {
+    display: flex;
+
+}
+
+.imagealbumprod {
+    width: 300px;
+    height: 300px;
+    display: inline;
+}
+
+.artistprodacceuil {
+    text-align: center;
+}
+
+.albumacceuil {
+    text-align: center;
+}
+
+.aproduits {
+    color: maroon;
+}
+
 
 
 /* /!\/!\/!\ */
@@ -442,7 +479,7 @@ footer {
 
 .artist-namestyle {
     text-align: center;
-    margin-top: 15px;
+    margin-top: 45px;
     font-weight: bold;
     color: maroon;
 }
@@ -487,10 +524,14 @@ footer {
 .panier-style {
     text-align: center;
     padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    color: maroon;
 }
 
 .artiste-panier {
-    color: red;
+    color: maroon;
+    margin-top: 50px;
 }
 
 .price-prod-panier {
@@ -502,7 +543,26 @@ footer {
 
 .lesboutons {
     display: flex;
-    justify-content: center;
-    margin-bottom: 25px;
+    justify-content: start;
+    margin-bottom: 35px;
+    margin-top: 55px;
 }
 
+#boutonretour {
+    color: goldenrod;
+    margin-right: 15px;
+}
+
+#boutonvalidation {
+    color: green;
+    margin-right: 15px;
+}
+
+#boutonviderpanier {
+    color: lightcoral;
+}
+
+.miniimageprod {
+    width: 75px;
+    height: 75px;
+}
