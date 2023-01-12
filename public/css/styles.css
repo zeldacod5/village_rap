@@ -95,7 +95,8 @@
 
 
 body {
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+/*   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
 /*    background-color: #DCDCDC !important; gris clair */
 }
 
@@ -129,6 +130,14 @@ body {
 .h2 {
     color: maroon;
 }
+
+.priceprodacceuil {
+    color: maroon;
+    text-align: center;
+    margin-top: 5px;
+}
+
+
 
 /* /!\/!\/!\ *//* /!\/!\/!\ */
 
@@ -539,6 +548,16 @@ footer {
     margin-left: 7px;
     color: black;
     font-weight: bold;
+}
+
+.afficheprix p {
+    margin-top: 25px;
+    text-align: end;
+}
+
+.afficheprix {
+    font-weight: bold;
+
 }
 
 .lesboutons {

@@ -9,7 +9,8 @@
         <div class="panier-style">
             <h1>Votre panier</h1>
         </div>
-
+        {% set total = 0 %}
+        
         {% for pro in panier %}
             <div class="artiste-panier">
                 {{ pro.artistname }}
@@ -24,8 +25,12 @@
                 <img src="/media/{{ pro.picture }}" class="miniimageprod">
             </div>
             <br>
-            
+            {% set total = total + pro.price %}
         {% endfor %}
+
+        <div class="afficheprix">
+            <p> PRIX TOTAL : {{ total }} € </p>
+        </div>
         <div class="lesboutons">
         <a href="{{ path('acceuil') }}" class="btn btn-warning" id="boutonretour">Retour sur la boutique</button>
         <br>
