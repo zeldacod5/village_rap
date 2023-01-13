@@ -107,6 +107,18 @@ body {
 /* /!\/!\/!\ */
 
 
+.phrase1 {
+    color: maroon;
+    text-align: center;
+    margin-top: 55px;
+}
+
+.phrase2 {
+    color: maroon;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 15px;
+}
 
 .cardacceuil {
     display: flex;
