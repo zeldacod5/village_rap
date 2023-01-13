@@ -26,12 +26,24 @@ class Jeu1 extends Fixture
         $u1->setEmail("toto@gmail.com");
         $u1->setRoles(["ROLE_USER"]);
         $u1->setPassword($this->hasher->hashPassword($u1, "toto"));
+        $u1->setFirstname("toto");
+        $u1->setLastname("tata");
+        $u1->setPhone("0323564565");
+        $u1->setCity("Paris");
+        $u1->setCountry("France");
+        $u1->setZipcode("75000");
         $manager->persist($u1);
 
         $u2 = new User();
         $u2->setEmail("admin@gmail.com");
         $u2->setRoles(["ROLE_ADMIN"]);
         $u2->setPassword($this->hasher->hashPassword($u2, "admin"));
+        $u2->setFirstname("Admin");
+        $u2->setLastname("L'unique");
+        $u2->setPhone("0323564789");
+        $u2->setCity("Amiens");
+        $u2->setCountry("France");
+        $u2->setZipcode("80000");
         $manager->persist($u2);
 
 
