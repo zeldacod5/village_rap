@@ -20,22 +20,26 @@ class RegistrationFormType extends AbstractType
     {
         $builder
         
-            ->add('email', EmailType::class)
+            ->add('email', EmailType::class, [
+                "label" => "Votre mail"
+            ])
             ->add('firstname', TextType::class, [
                 "label" => "Votre prénom"
             ])
-            ->add('lastname', TextType::class)
+            ->add('lastname', TextType::class, [
+                "label" => "Votre nom"
+             ])
             ->add('phone', TextType::class , [
-                'attr' =>['class'=>'form-control'],
+                "label" => "Votre numéro de téléphone"
             ])
             ->add('city', TextType::class , [
-                'attr' =>['class'=>'form-control'],
+                "label" => "Votre ville"
             ])
             ->add('country', TextType::class , [
-                'attr' =>['class'=>'form-control'],
+                "label" => "Votre pays"
             ])
             ->add('zipcode', TextType::class , [
-                'attr' =>['class'=>'form-control'],
+                "label" => "Votre code postal"
             ])
             
             ->add('agreeTerms', CheckboxType::class, [

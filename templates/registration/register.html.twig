@@ -1,14 +1,21 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Register{% endblock %}
+{% block title %}Formulaire d'inscription{% endblock %}
 
 {% block body %}
-    <h1>Formulaire d'inscription</h1>
 
+<div class="container center">
+    <div class="row">
+        <div class="col mb-3 formphrase">
+            <h1>Formulaire d'inscription</h1>
+        </div>
+    </div>
+
+ <fieldset class="mb-3 fieldset1">
     {{ form_start(registrationForm) }}
         {{ form_row(registrationForm.email) }}
         {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
+            label: 'Votre mot de passe'
         }) }}
         {{ form_row(registrationForm.firstname) }}
         {{ form_row(registrationForm.lastname) }}
@@ -18,6 +25,8 @@
         {{ form_row(registrationForm.zipcode) }}
         {{ form_row(registrationForm.agreeTerms) }}
 
-        <button type="submit" class="btn">Inscription</button>
+        <button type="submit" class="btn boutoninscription">Inscription</button>
     {{ form_end(registrationForm) }}
+    </fieldset>
+</div>
 {% endblock %}
